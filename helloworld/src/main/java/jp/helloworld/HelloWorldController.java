@@ -8,7 +8,11 @@ public class HelloWorldController {
  
 	@RequestMapping("/")
 	public String helloworld() {
-	return "Hello World";
- }
- 
+		return "Hello World";
+	}
+
+	@RequestMapping("/boot")
+	public String bootstrap() {
+		return "Bootstrap is here";
+	}
 }
