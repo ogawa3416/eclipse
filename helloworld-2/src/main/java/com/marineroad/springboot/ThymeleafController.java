@@ -20,7 +20,7 @@ public class ThymeleafController {
 		// 1.(1) 変数式
 		// ・コントローラーからテンプレートに値を渡す
 		// ・変数「msg」に値を設定
-		mav.addObject("msg", "コントローラーからテンプレートに値を渡す");
+		mav.addObject("msg", "コントローラーからテンプレートのここに値を渡す");
 
 		// 使用するビューを設定
 		mav.setViewName("thdemo"); // (3)
