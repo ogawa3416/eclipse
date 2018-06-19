@@ -14,7 +14,7 @@ public class ThymeleafController {
 	 *            ModelAndViewクラス テンプレートで利用するデータ類とビューに関する情報をまとめて管理するクラス
 	 * @return
 	 */
-	@RequestMapping("/thdemo")
+	@RequestMapping("/boot")
 	public ModelAndView index(ModelAndView mav) {
 
 		// 1.(1) 変数式
@@ -23,7 +23,7 @@ public class ThymeleafController {
 		mav.addObject("msg", "コントローラーからテンプレートのここに値を渡す");
 
 		// 使用するビューを設定
-		mav.setViewName("thdemo"); // (3)
+		mav.setViewName("index"); // (3)
 
 		return mav;
 	}
