@@ -1,0 +1,1 @@
+{"version":1,"machines":{"0ae21096f0a14fe79105eae0f214ed47":{"local_data_path":"C:/Vagrant/centos74/.vagrant","name":"default","provider":"virtualbox","state":"running","vagrantfile_name":null,"vagrantfile_path":"C:/Vagrant/centos74","updated_at":null,"extra_data":{"box":{"name":"bento/centos-7.4","provider":"virtualbox","version":"201803.24.0"}}}}}
