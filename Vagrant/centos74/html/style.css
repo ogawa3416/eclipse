@@ -4,7 +4,6 @@ body {
 
 .starter-template {
   padding: 140px 15px;
-  text-align: center;
 }
 .container {
   margin-top: 70px;
@@ -18,6 +17,8 @@ body {
 
 .footer {
   height: 270px;
+  width:;
+  background-color:
 }
 .footer-list li {
   color:#000000;
