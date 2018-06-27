@@ -1,13 +1,21 @@
 body {
   padding-top: 150px;
 }
-
+.navbar-inverse {
+  background-color:#ffffff;
+}
+.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
+  color: #000000;
+  background-color: #ffffff;
+}
 .starter-template {
   padding: 140px 15px;
+  background-color:#6E6E6E;
+  color:#000000
 }
 .container {
   margin-top: 70px;
-  margin-bottom:70px;  
+  margin-bottom:70px;
 }
 .navbar-brand {
   font-size:24px;
@@ -18,11 +26,11 @@ body {
 .footer {
   height: 270px;
   width:;
-  background-color:
+  background-color:#000000
 }
 .footer-list li {
-  color:#000000;
+  color:#ffffff;
   list-style: none;
   float: left;
-  padding: 33px 20px;
+  padding: 20px 25px ;
 }

@@ -12,6 +12,7 @@
 
    
     <title>oysterworld</title>
+    <link rel="shortcut icon" href="\pic\oysterworld_icon.png" type="image/png">
 
     <!-- Bootst0rap core CSS -->
     <link href="/css/bootstrap.min.css" rel="stylesheet">
@@ -46,9 +47,6 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          
-
-
           <a class="navbar-brand">オイスターワールド株式会社</a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
@@ -63,41 +61,50 @@
       </div>
     </nav>
 
-    <div class="container">
+    <div class="main">
 
       <div class="starter-template">
-        <p><a href="#">牡蠣の世界？</a></p>
-        <p><a href="#">サービス案内</a></p>
-        <h1>Welcome to Oyster World!</h1>
-        <p>オイスターワールドへようこそ！</p>
-        <p th:text="${msg}"></p>
-        <p class="lead">私たちはIT系スペシャリストプログラマと銀行系上流SEがタッグを組んで2018年4月に設立した株式会社です。
+        <img src ="pic\top_logo.jpg" width=600px height=338px>
+        <button class="btn btn-warning btn-lg">牡蠣の世界？</button>
+        <button class="btn btn-success btn-lg">サービス案内</button>
+        
+          <div class="well well-lg">
+            <h1>Welcome to Oyster World!</h1>
+            <p>オイスターワールドへようこそ！</p>
+            <p th:text="${msg}"></p>
+            <p class="lead">私たちはIT系スペシャリストプログラマと銀行系上流SEがタッグを組んで2018年4月に設立した株式会社です。
                         <br>
                         <br>
                         あなたのシステム・コンテンツ開発をお手伝いします。
                         <br>
                         <br>
                         どうぞお気軽にご相談ください。
-        </p>
-     
+            </p>
+          </div>     
 
-    </div><!-- /.container -->
+    </div>
 
 
     <div class="footer">
       <div class="footer-list">
         <ul>
-          <li>アクセス</li>
-          <li>お電話</li>
-          <li>連絡先</li>
+          <li><img src = "\pic\001.png" width=25px height=39px></li>
+          <li>アクセス<br>
+              〒113-0034 東京都文京区<br>
+              湯島3-2-14-1421
+          </li>
+          <li><img src = "\pic\002.png" width=25px height=37px></li>
+          <li>お電話<br>
+              03-6677-2532
+          </li>
+          <li><img src = "\pic\003.png" width=48px height=28px></li>
+          <li>連絡先<br>
+              info@oysterworld.jp
+          </li>
+          <li><img src = "\pic\004.png" width=30px height=32px></li>
           <li>Copyright (C) 2018<br>
               Oyster World&nbsp;Co.,Ltd<br>
               All Rights Reserved.</li>
-        </ul>
-        <ul>
-          <li>〒113-0034 東京都文京区湯島3-2-14-1421</li>
-          <li>03-6677-2532</li>
-        </ul>
       </div>
       
     </div>
