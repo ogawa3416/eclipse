@@ -1648,11 +1648,39 @@ blockquote p > cite {
   list-style: none;
 }
 
-/* フッター空行用に追加 */
+/* フッター空行用に追加*/
 
 li.leftNaviList_empty {
   height:15px;
   width:5%;
 }
+
+a {
+  color:#777;
+}
+
+
+/*作業用 */
+..right {
+  background-color:aqua
+}
+
+..btn1 {
+  background-color:yellow;
+}
+
+..btn2 {
+  background-color:aqua;
+}
+
+..btn3 {
+  background-color:crimson;
+}
+
+..btn4 {
+  background-color:burlywood;
+}
+/*作業用 */
+
 
 /*# sourceMappingURL=style.css.map */
