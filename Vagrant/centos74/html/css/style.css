@@ -1216,6 +1216,7 @@ blockquote p > cite {
   background: #f0ad4e;
   color: #fff;
   border: 2px solid #f0ad4e;
+  width: 100%;
 }
 .btn-warning:hover, .btn-warning:focus, .btn-warning:active {
   background: #eea236 !important;
@@ -1670,7 +1671,7 @@ a {
 }
 
 ..btn2 {
-  background-color:aqua;
+  background-color:chocolate;
 }
 
 ..btn3 {
