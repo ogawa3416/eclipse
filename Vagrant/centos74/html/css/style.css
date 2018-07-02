@@ -1216,7 +1216,6 @@ blockquote p > cite {
   background: #f0ad4e;
   color: #fff;
   border: 2px solid #f0ad4e;
-  width: 100%;
 }
 .btn-warning:hover, .btn-warning:focus, .btn-warning:active {
   background: #eea236 !important;
@@ -1641,7 +1640,8 @@ blockquote p > cite {
 }
 
 
-/* ここから追記 */
+/* -------------------ここから追記------------------- */
+
 .gtco-footer-link li {
   float: left;
   padding-right: 15px;
@@ -1649,19 +1649,30 @@ blockquote p > cite {
   list-style: none;
 }
 
-/* フッター空行用に追加*/
-
+/* フッター空行用に追加 */
 li.leftNaviList_empty {
   height:15px;
   width:5%;
 }
+/* フッター空行用に追加 */
 
 a {
   color:#777;
 }
 
+.btn-warning {
+  width:100%;
+}
 
-/*作業用 */
+.btn-success {
+  width:100%;
+}
+
+.btn-info {
+  width:100%;
+}
+
+/* 作業用 */
 ..right {
   background-color:aqua
 }
@@ -1681,7 +1692,7 @@ a {
 ..btn4 {
   background-color:burlywood;
 }
-/*作業用 */
+/* 作業用 */
 
 
 /*# sourceMappingURL=style.css.map */
