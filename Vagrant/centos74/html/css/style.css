@@ -85,7 +85,7 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 
 .gtco-container {
-  max-width: 1140px;
+  max-width: 1176px;
   position: relative;
   margin: 0 auto;
   padding-left: 15px;
@@ -1642,6 +1642,74 @@ blockquote p > cite {
 
 /* -------------------ここから追記------------------- */
 
+/* header */
+.header {
+  margin:50px 20px 30px 30px;
+}
+
+.menu {
+  position: relative;
+}
+
+.menu p {
+  position: absolute;
+  margin-left:50px;
+  font-size:24px;
+  color: black;
+  top: 0;
+  left: 0;
+}
+
+.circle1 {
+  width="15％";
+  opacity:0.7;
+}
+.circle2 {
+  width="15％";
+}
+
+/* ここまでheader */
+
+
+
+
+
+
+/* main */
+.main {
+  background-color:#DDDDDD;
+}
+
+.left {
+  margin-top:30px;
+}
+
+.color_11 {
+  font-family:'Snell Roundhand','Segoe Script',sans-serif;
+  font-weight:bold;
+}
+
+.btn1 {
+  margin-top:20px;
+}
+
+.btn2 {
+  margin-top:5px;
+}
+
+.btn3 {
+  margin-top:5px;
+}
+
+.btn4 {
+  margin-top:5px;
+}
+
+/* ここまでmain */
+
+
+
+/* footer */
 .gtco-footer-link li {
   float: left;
   padding-right: 15px;
@@ -1654,7 +1722,10 @@ li.leftNaviList_empty {
   height:15px;
   width:5%;
 }
-/* フッター空行用に追加 */
+
+/* ここまでfooter */
+
+
 
 a {
   color:#777;
@@ -1672,10 +1743,6 @@ a {
   width:100%;
 }
 
-.color_11 {
-  font-family:'Snell Roundhand','Segoe Script',sans-serif;
-  font-weight:bold;
-}
 
 /* 作業用 */
 ..right {
