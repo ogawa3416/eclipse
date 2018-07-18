@@ -100,7 +100,8 @@ h1, h2, h3, h4, h5, h6, figure {
   width: 100%;
   padding: 30px 0;
   z-index: 1001;
-  font-family: "Montserrat", sans-serif;
+  font: normal normal bold 21px/1.2em 'メイリオ',meiryo,'ヒラギノ角ゴ pro w3','hiragino kaku gothic pro',sans-serif;
+  text-shadow: 0 0 black;
 }
 @media screen and (max-width: 768px) {
   .gtco-nav {
@@ -869,7 +870,7 @@ form label {
   font-weight: 300;
 }
 .gtco-heading p {
-  font-size: 18px;
+  font-size: 15px;
   line-height: 1.7;
   color: #000000;
 }
@@ -1656,8 +1657,8 @@ blockquote p > cite {
 .menu p {
   position: relative;
   margin-left:50px;
-  font-size:24px;
-  color: black;
+  font-size: 24px;
+  color:#606060;
   top: 0;
   left: 0;
 }
@@ -1725,6 +1726,10 @@ blockquote p > cite {
   color:black;
 }
 
+.item{
+  font-size:15px;
+}
+
 /* ここまでmain */
 
 
@@ -1735,6 +1740,11 @@ blockquote p > cite {
   padding-right: 15px;
   padding-left: 0px;
   list-style: none;
+  font-size:15px;
+}
+
+.gtco-footer-link {
+  font-size:15px;
 }
 
 .footer p {
