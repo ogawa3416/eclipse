@@ -100,7 +100,7 @@ h1, h2, h3, h4, h5, h6, figure {
   width: 100%;
   padding: 30px 0;
   z-index: 1001;
-  font: normal normal bold 21px/1.2em 'メイリオ',meiryo,'ヒラギノ角ゴ pro w3','hiragino kaku gothic pro',sans-serif;
+  font: normal normal 21px/1.2em 'メイリオ',meiryo,'ヒラギノ角ゴ pro w3','hiragino kaku gothic pro',sans-serif;
   text-shadow: 0 0 black;
 }
 @media screen and (max-width: 768px) {
@@ -1661,6 +1661,7 @@ blockquote p > cite {
   color:#606060;
   top: 0;
   left: 0;
+  font-weight: bold;
 }
 
 .circle1 {
@@ -1704,6 +1705,7 @@ blockquote p > cite {
 .color_11 {
   font-family:'Snell Roundhand','Segoe Script',sans-serif;
   font-weight:bold;
+  font-size:22px;
 }
 
 .btn1 {
@@ -1728,6 +1730,21 @@ blockquote p > cite {
 
 .item{
   font-size:15px;
+}
+
+.wel {
+  background-color:rgba(60, 178, 178, 1);
+  border:3px solid #fff;
+  padding:100px 10px 70px 10px;
+}
+
+.welcome p {
+  color:#fff;
+}
+
+.staff1 {
+  background-color:rgba(60, 178, 178, 1);
+  border:3px solid #fff;
 }
 
 /* ここまでmain */
