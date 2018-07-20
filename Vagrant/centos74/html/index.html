@@ -84,7 +84,7 @@
 		<div class="gtco-container main_top">
 			<div class="row">
 				<div class="col-xs-12 col-md-8 left">
-					<div class="owl-carousel owl-carousel-fullwidth">
+					<div id="owl-top" class="owl-carousel owl-carousel-fullwidth">
 						<div class="item">
 							<img src="images/top_logo.jpg" alt="top_logo">
 							<div class="slider-copy">
@@ -204,6 +204,13 @@
 	<script src="js/owl.carousel.min.js"></script>
 	<!-- Main -->
 	<script src="js/main.js"></script>
+	<script>
+  	$(function() {
+    	$("#owl-top").owlCarousel({
+  		navigation : false,
+  		});
+  	});
+  	</script>
 
 	</body>
 </html>
