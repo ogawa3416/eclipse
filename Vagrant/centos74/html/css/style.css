@@ -1641,6 +1641,10 @@ blockquote p > cite {
 
 
 /* -------------------ここから追記------------------- */
+a {
+  color:#777;
+}
+
 
 /* header */
 .header {
@@ -1698,6 +1702,10 @@ blockquote p > cite {
   background-color:#6E6E6E;
 }
 
+.owl-controls {
+  display: none;
+}
+
 .left {
   margin-top:30px;
 }
@@ -1710,14 +1718,50 @@ blockquote p > cite {
 
 .btn1 {
   margin-top:20px;
+  background-color:rgba(242, 173, 46, 1) ;
+  border:3px solid #fff;
+  box-shadow: 0px 1px 4px #fff inset;
+}
+.btn1:hover {
+  background-color:rgba(0, 0, 0, 1);
+  transition:all 0.5s;
+}
+.btn1 a {
+  color:#fff;
+  display:block;
+  font-size:30px;
 }
 
 .btn2 {
   margin-top:5px;
+  background-color:rgba(98, 170, 35, 1) ;
+  border:3px solid #fff;
+  box-shadow: 0px 1px 4px #fff inset;
+}
+.btn2:hover {
+  background-color:rgba(0, 0, 0, 1);
+  transition:all 0.5s;
+}
+.btn2 a {
+  color:#fff;
+  display:block;
+  font-size:30px;
 }
 
 .btn3 {
   margin-top:5px;
+  background-color:rgba(242, 173, 46, 1) ;
+  border:3px solid #fff;
+  box-shadow: 0px 1px 4px #fff inset;
+}
+.btn3:hover {
+  background-color:rgba(0, 0, 0, 1);
+  transition:all 0.5s;
+}
+.btn3 a {
+  color:#fff;
+  display:block;
+  font-size:30px;
 }
 
 .btn4 {
@@ -1735,7 +1779,7 @@ blockquote p > cite {
 .wel {
   background-color:rgba(60, 178, 178, 1);
   border:3px solid #fff;
-  padding:100px 10px 70px 10px;
+  padding:20px 10px 10px 10px;
 }
 
 .welcome p {
@@ -1749,6 +1793,9 @@ blockquote p > cite {
 .service-tittle p {
   font-size:18px;
 }
+
+
+
 
 /* ここまでmain */
 
@@ -1769,6 +1816,7 @@ blockquote p > cite {
 
 .footer p {
   color:#FFF;
+  font-size:14px;
 }
 
 /* フッター空行用に追加 */
@@ -1780,10 +1828,6 @@ li.leftNaviList_empty {
 /* ここまでfooter */
 
 
-
-a {
-  color:#777;
-}
 
 .btn-warning {
   width:100%;
