@@ -1,7 +1,7 @@
 package ex14_03_1;
 public class Grade{
-	String	name; 
-	int		score; 
+	private String	name; 
+	private int		score; 
 	public	Grade(String	name, int score){
 		this.name  	=	name;
 		this.score	=	score;
@@ -11,5 +11,19 @@ public class Grade{
 		if(score<70)	str	=	"不合格";
 		return	str;
 	}
+	
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public int getScore() {
+		return score;
+	}
+	public void setScore(int score) {
+		this.score = score;
+	}
+	
 }
 

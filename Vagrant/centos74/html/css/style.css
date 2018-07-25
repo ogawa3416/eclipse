@@ -147,7 +147,7 @@ h1, h2, h3, h4, h5, h6, figure {
 .gtco-nav ul li a {
   font-size: 16px;
   padding: 30px 10px;
-  color: #cccccc;
+  color: #3CB2B2;
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
@@ -1685,7 +1685,9 @@ a {
   width:55px;
 }
 
-
+ {
+  color:#3CB2B2;
+}
 /* ここまでheader */
 
 
@@ -1716,11 +1718,16 @@ a {
   font-size:22px;
 }
 
+
 .btn1 {
   margin-top:20px;
   background-color:rgba(242, 173, 46, 1) ;
   border:3px solid #fff;
   box-shadow: 0px 1px 4px #fff inset;
+  padding:1px 0px 15px 0px;
+}
+.bt1 {
+  float:left;
 }
 .btn1:hover {
   background-color:rgba(0, 0, 0, 1);
@@ -1731,12 +1738,23 @@ a {
   display:block;
   font-size:30px;
 }
+.btn1 img{
+ margin-right:px;
+ position:relative;
+ top:9px;
+ right:-20px;
+}
+
 
 .btn2 {
-  margin-top:5px;
+  margin-top:7px;
   background-color:rgba(98, 170, 35, 1) ;
   border:3px solid #fff;
   box-shadow: 0px 1px 4px #fff inset;
+  padding:1px 0px 15px 0px;
+}
+.bt2 {
+  float:left;
 }
 .btn2:hover {
   background-color:rgba(0, 0, 0, 1);
@@ -1747,25 +1765,16 @@ a {
   display:block;
   font-size:30px;
 }
+.btn2 img{
+ margin-right:px;
+ position:relative;
+ top:9px;
+ right:-20px;
+}
 
-.btn3 {
-  margin-top:5px;
-  background-color:rgba(242, 173, 46, 1) ;
-  border:3px solid #fff;
-  box-shadow: 0px 1px 4px #fff inset;
-}
-.btn3:hover {
-  background-color:rgba(0, 0, 0, 1);
-  transition:all 0.5s;
-}
-.btn3 a {
-  color:#fff;
-  display:block;
-  font-size:30px;
-}
 
 .btn4 {
-  margin-top:5px;
+  margin-top:10px;
 }
 
 .gtco-staff p{
@@ -1794,7 +1803,30 @@ a {
   font-size:18px;
 }
 
+.gtco-staff h5 {
+  font-size:26px;
+}
 
+.feature-left h6 {
+  font-size:19px;
+  margin-top:25px;
+}
+
+.staff1 img{
+ display:inline-block;
+ vertical-align:middle;
+ margin-right:30px;
+ position:relative;
+ top:20px;
+ left:10px;
+}
+
+.staff1 h5{
+  background-color:rgba(60, 178, 178, 1);
+  border:3px solid #fff;
+  padding:0px 0px 0px 0px;
+  margin-bottom:30px;
+}
 
 
 /* ここまでmain */
@@ -1802,27 +1834,23 @@ a {
 
 
 /* footer */
-.gtco-footer-link li {
-  float: left;
-  padding-right: 15px;
-  padding-left: 0px;
-  list-style: none;
-  font-size:15px;
-}
-
-.gtco-footer-link {
-  font-size:15px;
-}
 
 .footer p {
   color:#FFF;
-  font-size:14px;
+  font-size:12px;
 }
 
-/* フッター空行用に追加 */
-li.leftNaviList_empty {
-  height:15px;
-  width:5%;
+.gtco-staff p {
+  display:inline-block;
+  vertical-align:top;
+}
+
+.copyright p {
+  font-size:11px;
+}
+
+.gtco-staff a{
+  color:#fff;
 }
 
 /* ここまでfooter */
@@ -1842,27 +1870,6 @@ li.leftNaviList_empty {
 }
 
 
-/* 作業用 */
-..right {
-  background-color:aqua
-}
-
-..btn1 {
-  background-color:yellow;
-}
-
-..btn2 {
-  background-color:chocolate;
-}
-
-..btn3 {
-  background-color:crimson;
-}
-
-..btn4 {
-  background-color:burlywood;
-}
-/* 作業用 */
 
 
 /*# sourceMappingURL=style.css.map */
