@@ -12,4 +12,8 @@ public class Card {
 	String face() { // カードを表す文字列を返す
 		return suit + "/" + number;
 	}
+	public static void main(String[] args){
+		Card card = new Card("スペード", 10);
+		System.out.println(card.face());
+	}
 }
