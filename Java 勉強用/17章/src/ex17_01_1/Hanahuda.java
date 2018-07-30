@@ -8,7 +8,11 @@ class Card{
 		this.suit	  = suit;
 	}
 }
-//class Hanahuda extends Card {
-//	private int month;
+class Hanahuda extends Card {
+	private int month;
+	public  Hanahuda(int number, int suit, int month){ // コンストラクタ
+        super(number, suit);
+        this.month = month;
+    }
 
-//}
+	}
