@@ -28,5 +28,16 @@ dependencies {
 	compile('org.springframework.boot:spring-boot-starter-thymeleaf')
 	compile('org.springframework.boot:spring-boot-starter-web')
 	testCompile('org.springframework.boot:spring-boot-starter-test')
+	compile('org.thymeleaf:thymeleaf-spring4')
+    compile('nz.net.ultraq.thymeleaf:thymeleaf-layout-dialect')
+    compile('org.webjars:jquery:3.2.1')
+    compile('org.webjars:jquery-ui:1.12.1')
+    compile('org.webjars:bootstrap:4.1.0')
+    runtime('org.springframework.boot:spring-boot-devtools')
+    compileOnly('org.projectlombok:lombok')
+    providedRuntime('org.springframework.boot:spring-boot-starter-tomcat')
+    testCompile('org.springframework.boot:spring-boot-starter-test')
 }
 
+ext['thymeleaf.version'] = '3.0.9.RELEASE'
+ext['thymeleaf-layout-dialect.version'] = '2.3.0'
