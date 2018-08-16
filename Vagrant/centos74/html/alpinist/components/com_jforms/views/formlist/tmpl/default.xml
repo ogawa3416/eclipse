@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+* XML settings for Form Element
+*
+* @version		$Id: default.xml 28 2008-12-09 07:14:08Z dr_drsh $
+* @package		Joomla
+* @subpackage	JForms
+* @copyright	Copyright (C) 2008 Mostafa Muhammad. All rights reserved.
+* @license		GNU/GPL
+-->
+<metadata>
+	<layout title="JFORMS_LIST_FORM_LAYOUT">
+		<message>
+			<![CDATA[JFORMS_LIST_FORM_LAYOUT_DESC]]>
+		</message>
+	</layout>
+	<fields name="request">
+	  <fieldset name="request">
+		  <field 
+		  		name="id" 
+				type="form" 
+				default="0"
+				addfieldpath="/administrator/components/com_jforms/elements"
+				label="Select_Form"
+				description="Select_Form">
+		  </field>
+	  </fieldset>
+	</fields>
+	<fields name="params">
+	  <fieldset name="basic">
+	  	<field name="fromdate" type="calendar" default="" label="FROM" description="JFORMS_FROMDATE_DESC"/>
+		<field name="todate" type="calendar" default="" label="TO" description="JFORMS_TODATE_DESC"/>
+		<field name="display_num" type="list" default="20" label="JFORMS_NUM_LINKS" description="JFORMS_NUM_LINKS_DESC">
+				<option value="5">J5</option>
+				<option value="10">J10</option>
+				<option value="15">J15</option>
+				<option value="20">J20</option>
+				<option value="25">J25</option>
+				<option value="30">J30</option>
+				<option value="50">J50</option>
+				<option value="100">J100</option>
+				<option value="0">JALL</option>
+		</field>
+		<field name="tablewidth" type="text" default="100%" label="Width" description="JFORMS_TABLEWIDTH_DESC"/>
+	  </fieldset>
+	</fields>
+</metadata>

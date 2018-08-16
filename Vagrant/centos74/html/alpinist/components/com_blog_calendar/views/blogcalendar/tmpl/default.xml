@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+<layout title="Article_list_by_date"><message></message></layout>
+	<fields name="params">
+	 <fieldset name="params">
+	 			<field name="category_ids" multiple="true" type="category"
+				description="COM_BLOG_CALENDAR_CHOOSE_CATEGORIES_DESC"
+				extension="com_content"
+				label="COM_BLOG_CALENDAR_CHOOSE_CATEGORIES_LABEL"
+			/>
+		<field name="date" type="calendar" default="" label="Show articles written on a specific date (yyyy-mm-dd). Blank to show all " description="Examples: 2006-02-01  2006-02  2006"></field>
+		<field name="dateformat_dmy" type="text" default="%A, %d %B %Y" label="Date format for day" description="Enter de date format to use for day date (full date like Monday, 02 January 2011). %A is the name of the week day, %d is the number of the month day (2 digits), %B is the month name and %Y is the year (4 digits)."></field>
+		<field name="dateformat_my" type="text" default="%B %Y" label="Date format for month" description="Enter de date format to use for month date (when day is not displayed). %B is the month name and %Y is the year (4 digits)."></field>
+		<field name="dateformat_y" type="text" default="%Y" label="Date format for year" description="Enter de date format to use for year only (when month and day is not displayed). %Y is the year (4 digits)."></field>
+		<field name="count" type="text" default="10" label="Number of articles in each page" description="">
+		 </field>
+	        <field type="spacer"></field>
+	        <field name="show_create_date" type="radio" default="1" label="Show Created Date" description="Show the date below the article title">
+			<option value="0">Hide</option>
+			<option value="1">Show</option>
+			<option value="globals">Use Globals</option>
+	        </field>
+	        <field name="show_modify_date" type="radio" default="1" label="Show Modified Date">
+			<option value="0">Hide</option>
+			<option value="1">Show</option>
+			<option value="globals">Use Globals</option>
+	        </field>
+                <field name="show_intro" type="radio" default="1" label="Show Intro Text" description="">
+			<option value="0">Hide</option>
+			<option value="1">Show</option>
+			<option value="globals">Use Globals</option>
+	        </field>
+	        <field name="show_fulltext" type="radio" default="0" label="Show Full Text">
+			<option value="0">Hide</option>
+			<option value="1">Show</option>
+		</field>
+		<field name="truncate_words" type="text" default="" label="Number of words for truncated text" description="Autotruncate words. If greater than 0 will break other config."/>
+		<field name="clean_xhtml" type="radio" default="0" label="Clean XHTML" description="Choose if you want strip html tags for text output if Autotruncate.">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</field>
+		<field name="show_author" type="radio" default="1" label="Show the author name" description="">
+			<option value="0">Hide</option>
+			<option value="1">Show</option>
+			<option value="globals">Use Globals</option>
+		</field>
+                <field name="show_author_username" type="radio" default="1" label="Show name or username" description="">
+			<option value="1">Name</option>
+			<option value="2">Username</option>
+		</field>
+		<field name="show_category" type="radio" default="1" label="Show category" description="Show the category of the article">
+			<option value="0">Hide</option>
+			<option value="1">Show</option>
+			<option value="globals">Use Globals</option>
+		</field>
+		<field name="link_category" type="radio" default="1" label="Category Title Linkable" description="">
+			<option value="0">Hide</option>
+			<option value="1">Show</option>
+			<option value="globals">Use Globals</option>
+		</field>
+		
+		<field type="spacer"></field>
+		<field name="show_icons" type="radio" default="1" label="Icons">
+			<option value="0">Hide</option>
+			<option value="1">Show</option>
+			<option value="globals">Use Globals</option>
+		</field>
+		<field name="show_print_icon" type="radio" default="1" label="Print Icon" description="">
+			<option value="0">Hide</option>
+			<option value="1">Show</option>
+			<option value="globals">Use Globals</option>
+		</field>
+		<field name="show_email_icon" type="radio" default="1" label="E-Mail Icon" description="">
+			<option value="0">Hide</option>
+			<option value="1">Show</option>
+			<option value="globals">Use Globals</option>
+		</field>
+          	<field type="spacer"></field>
+                <field name="cbintegration" type="radio" default="0" label="CBINTEGRATION" description="CBINTEGRATIONDESC">
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+	 </fieldset>
+	</fields>
+</metadata>

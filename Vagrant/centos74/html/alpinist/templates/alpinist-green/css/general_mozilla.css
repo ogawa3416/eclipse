@@ -1,0 +1,4 @@
+input[type="text"],input[type="password"],input[type="email"],select { border-color: #606060!important; }
+input[type="text"]:hover,input[type="password"]:hover,input[type="email"]:hover,select:hover,
+input[type="text"]:focus,input[type="password"]:focus,input[type="email"]:focus,select:focus
+{ border:1px solid rgba(165,201,86,1)!important; }

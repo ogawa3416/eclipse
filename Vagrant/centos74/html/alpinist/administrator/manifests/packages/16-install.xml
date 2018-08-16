@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<extension type="package" version="1.6">
+	<name>Japanese Language Pack for AkeebaBackup</name>
+	<packagename>ja-JP</packagename>
+	<creationDate>2011/07/29</creationDate>
+	<author>Masato Sato</author>
+	<authorEmail>webmaster@joomlaway.net</authorEmail>
+	<version>3.3.1</version>
+	<url></url>
+	<packager></packager>
+	<packagerurl></packagerurl>
+	<description>Japanese Language Pack for AkeebaBackup</description>
+	<files>
+		<file type="language" client="site" id="ja-JP">site</file>
+		<file type="language" client="admin" id="ja-JP">admin</file>
+	</files>
+</extension>

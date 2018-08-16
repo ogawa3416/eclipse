@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+        <view title="Reservation Form View" hidden="true">
+                <message><![CDATA[Reservation Form View for making a reservation.]]></message>
+        </view>
+</metadata>

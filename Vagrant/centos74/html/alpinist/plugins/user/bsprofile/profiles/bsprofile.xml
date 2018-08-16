@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<!-- $Id: bsprofile.xml 20156 2011-01-07 13:10:16Z eddieajau $ -->
+<form>
+<url addpath="/plugins/user/bsprofile/elements">
+	<fields name="bsprofile">
+		<fieldset name="bsprofile"
+			label="PLG_USER_BSPROFILE_SLIDER_LABEL"
+		>
+			<field
+				name="isbusiness"
+				type="list"
+				default="0"
+				label="PLG_USER_BSPROFILE_FIELD_ISBUSINESS_LABEL"
+				description="PLG_USER_BSPROFILE_FIELD_ISBUSINESS_DESC">
+				<option	value="1">PLG_USER_BSPROFILE_OPTION_CORP_USER</option>
+				<option	value="0">PLG_USER_BSPROFILE_OPTION_PUBLIC_USER</option>
+			</field>
+			<field
+				name="name1"
+				type="text"
+				id="name1"
+				description="PLG_USER_BSPROFILE_FIELD_NAME1_DESC"
+				filter="string"
+				label="PLG_USER_BSPROFILE_FIELD_NAME1_LABEL"
+				message="PLG_USER_BSPROFILE_FIELD_NAME1_MESSAGE"
+				size="30"
+			/>
+			<field
+				name="name2"
+				type="text"
+				id="name2"
+				description="PLG_USER_BSPROFILE_FIELD_NAME2_DESC"
+				filter="string"
+				label="PLG_USER_BSPROFILE_FIELD_NAME2_LABEL"
+				message="PLG_USER_BSPROFILE_FIELD_NAME2_MESSAGE"
+				size="30"
+			/>
+			<field
+				name="divcode"
+				type="sql"
+				key_field="key_field"
+				value_field="value_field"
+				query="SELECT divcode as key_field, divname_s as value_field FROM #__bs_division WHERE div_stat = 1 ORDER BY divcode"
+				label="PLG_USER_BSPROFILE_FIELD_SECTION_LABEL"
+				description="PLG_USER_BSPROFILE_FIELD_SECTION_DESC">
+				<option	value="">PLG_USER_BSPROFILE_OPTION_GUIDE</option>
+			</field>
+			<field
+				name="employeeno"
+				type="text"
+				id="employeeno"
+				description="PLG_USER_BSPROFILE_FIELD_EMPLOYEENO_DESC"
+				filter="string"
+				label="PLG_USER_BSPROFILE_FIELD_EMPLOYEENO_LABEL"
+				message="PLG_USER_BSPROFILE_FIELD_EMPLOYEENO_MESSAGE"
+				size="30"
+			/>
+			<field
+				name="company"
+				type="text"
+				id="company"
+				description="PLG_USER_BSPROFILE_FIELD_COMPANY_DESC"
+				filter="string"
+				label="PLG_USER_BSPROFILE_FIELD_COMPANY_LABEL"
+				message="PLG_USER_BSPROFILE_FIELD_COMPANY_MESSAGE"
+				size="70"
+			/>
+			<field
+				name="country"
+				type="text"
+				id="country"
+				description="PLG_USER_BSPROFILE_FIELD_COUNTRY_DESC"
+				filter="string"
+				label="PLG_USER_BSPROFILE_FIELD_COUNTRY_LABEL"
+				message="PLG_USER_BSPROFILE_FIELD_COUNTRY_MESSAGE"
+				size="30"
+			/>
+			<field
+				name="state"
+				type="text"
+				id="state"
+				description="PLG_USER_BSPROFILE_FIELD_STATE_DESC"
+				filter="string"
+				label="PLG_USER_BSPROFILE_FIELD_STATE_LABEL"
+				message="PLG_USER_BSPROFILE_FIELD_STATE_MESSAGE"
+				size="30"
+			/>
+			<field
+				name="city"
+				type="text"
+				id="city"
+				description="PLG_USER_BSPROFILE_FIELD_CITY_DESC"
+				filter="string"
+				label="PLG_USER_BSPROFILE_FIELD_CITY_LABEL"
+				message="PLG_USER_BSPROFILE_FIELD_CITY_MESSAGE"
+				size="30"
+			/>
+			<field
+				name="address"
+				type="text"
+				id="address"
+				description="PLG_USER_BSPROFILE_FIELD_ADDRESS_DESC"
+				filter="string"
+				label="PLG_USER_BSPROFILE_FIELD_ADDRESS_LABEL"
+				message="PLG_USER_BSPROFILE_FIELD_ADDRESS_MESSAGE"
+				size="70"
+			/>
+			<field
+				name="zipcode"
+				type="text"
+				id="zipcode"
+				description="PLG_USER_BSPROFILE_FIELD_POSTAL_CODE_DESC"
+				filter="string"
+				label="PLG_USER_BSPROFILE_FIELD_POSTAL_CODE_LABEL"
+				message="PLG_USER_BSPROFILE_FIELD_POSTAL_CODE_MESSAGE"
+				size="30"
+			/>
+
+			<field
+				name="teleno"
+				type="tel"
+				id="teleno"
+				description="PLG_USER_BSPROFILE_FIELD_PHONE_DESC"
+				filter="string"
+				label="PLG_USER_BSPROFILE_FIELD_PHONE_LABEL"
+				message="PLG_USER_BSPROFILE_FIELD_PHONE_MESSAGE"
+				size="30"
+			/>
+
+			<field
+				name="company_hp"
+				type="url"
+				id="company_hp"
+				description="PLG_USER_BSPROFILE_FIELD_WEB_SITE_DESC"
+				filter="string"
+				label="PLG_USER_BSPROFILE_FIELD_WEB_SITE_LABEL"
+				message="PLG_USER_BSPROFILE_FIELD_WEB_SITE_MESSAGE"
+				size="70"
+			/>
+
+			<field
+				name="note"
+				type="textarea"
+				description="PLG_USER_BSPROFILE_FIELD_NOTE_DESC"
+				label="PLG_USER_BSPROFILE_FIELD_NOTE_LABEL"
+				message="PLG_USER_BSPROFILE_FIELD_NOTE_MESSAGE"
+				cols="60"
+				rows="5"
+				filter="safehtml"
+			/>
+		</fieldset>
+	</fields>
+</url>
+</form>

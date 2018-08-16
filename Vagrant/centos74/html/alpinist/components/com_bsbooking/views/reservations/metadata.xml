@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+        <view title="Reservation List View" hidden="true">
+                <message><![CDATA[Display Reservation Data in Tabular Format]]></message>
+        </view>
+</metadata>

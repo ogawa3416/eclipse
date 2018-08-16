@@ -1,0 +1,229 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+	<title>Access rights</title>
+	<link rel='STYLESHEET' type='text/css' href='./../BSSchedulerConfigurator.css'>
+	<script src='./../dhtmlx.js'></script>
+</head>
+<script>
+	window.onload = function() {
+		var locale = parent.conf.i18n.access;
+		var els = document.getElementsByTagName('*');
+		for (var i in els) {
+			if (els[i].getAttribute) {
+				var attr = els[i].getAttribute('serialize');
+				if (attr == 'true') {
+					dhtmlxEvent(els[i], 'change', function() {
+						parent.conf.getXML();
+					});
+				}
+			}
+			if (els[i].getAttribute) {
+				var text = els[i].getAttribute('locale');
+				if (text) {
+					els[i].innerHTML = locale[text];
+				}
+			}
+		}
+		if (parent.conf.access == 'joomla') {
+			document.getElementById('access_wp_div').style.display = 'none';
+		} else {
+			document.getElementById('access_joomla_div').style.display = 'none';
+		}
+		parent.conf.loaded++;
+		parent.conf.loadingCheck();
+	}
+
+	function getOptions(type) {
+		var xml = '';
+		if (type == 'joomla') {
+			var optionsArray = new Array('access_guestView_j', 'access_guestAdd_j', 'access_guestEdit_j', 
+					'access_registeredView_j', 'access_registeredAdd_j', 'access_registeredEdit_j', 
+					'access_authorView_j', 'access_authorAdd_j', 'access_authorEdit_j', 
+					'access_editorView_j', 'access_editorAdd_j', 'access_editorEdit_j', 
+					'access_publisherView_j', 'access_publisherAdd_j', 'access_publisherEdit_j', 
+					'access_managerView_j', 'access_managerAdd_j', 'access_managerEdit_j', 
+					'access_administratorView_j', 'access_administratorAdd_j', 'access_administratorEdit_j', 
+					'access_superadministratorView_j', 'access_superadministratorAdd_j', 'access_superadministratorEdit_j', 'privatemode');
+		} else {
+			var optionsArray = new Array('access_guestView', 'access_guestAdd', 'access_guestEdit', 
+					'access_subscriberView', 'access_subscriberAdd', 'access_subscriberEdit', 
+					'access_contributorView', 'access_contributorAdd', 'access_contributorEdit', 
+					'access_authorView', 'access_authorAdd', 'access_authorEdit', 
+					'access_editorView', 'access_editorAdd', 'access_editorEdit', 
+					'access_administratorView', 'access_administratorAdd', 'access_administratorEdit', 'privatemode');
+		}
+
+		for (var i = 0; i < optionsArray.length; i++) {
+			var elem = document.getElementById(optionsArray[i]);
+			var name = optionsArray[i];
+			if (elem.tagName == 'SELECT') {
+				xml += '<' + name + '>' + elem.value + '</' + name + ">";
+			} else {
+				xml += '<' + name + '>' + elem.checked + '</' + name + ">";
+			}
+		}
+		return xml;
+	}
+
+	function setOptions(xml) {
+		var xmlString = '';
+		var els = xml.childNodes;
+		for (var i = 0; i < els.length; i++) {
+			if (els[i].childNodes[0]) {
+				var value = els[i].childNodes[0].nodeValue;
+			} else {
+				var value = '';
+			}
+			var el = document.getElementById(els[i].nodeName);
+			if (el) {
+				if (el.getAttribute('type') == 'checkbox') {
+					if (value == 'true') {
+						el.checked = true;
+					} else {
+						el.checked = false;
+					}
+				} else {
+					el.value = value;
+				}
+			}
+		}
+	}
+</script>
+<body>
+	<div class="dhtmlxAccessDiv" id="access_wp_div">
+		<div class="dhtmlxSettingPanel">
+			<div class="dhtmlxSettingPanelLabel" locale="access">Access rights</div>
+			<table class="dhtmlxAccessTable">
+				<tr>
+					<th class="dhtmlxLeftCol">&nbsp;</th>
+					<th class="dhtmlxViewCol" locale="view">View</th>
+					<th class="dhtmlxAddCol" locale="add">Add</th>
+					<th class="dhtmlxEditCol" locale="edit">Edit</th>
+				</tr>
+				<tr>
+					<td class="dhtmlxLeftCol" locale="guests">Guests</td>
+					<td class="dhtmlxViewCol"><input type="checkbox" name="access_guestView" id="access_guestView" class="dhtmlxInputCheckbox" serialize="true" /></td>
+					<td class="dhtmlxAddCol"><input type="checkbox" name="access_guestAdd" id="access_guestAdd" class="dhtmlxInputCheckbox" serialize="true" /></td>
+					<td class="dhtmlxEditCol"><input type="checkbox" name="access_guestEdit" id="access_guestEdit" class="dhtmlxInputCheckbox" serialize="true" /></td>
+				</tr>
+				
+				<tr>
+					<td class="dhtmlxLeftCol" locale="subscriber">Subscriber</td>
+					<td class="dhtmlxViewCol"><input type="checkbox" name="access_subscriberView" id="access_subscriberView" class="dhtmlxInputCheckbox" serialize="true" /></td>
+					<td class="dhtmlxAddCol"><input type="checkbox" name="access_subscriberAdd" id="access_subscriberAdd" class="dhtmlxInputCheckbox" serialize="true" /></td>
+					<td class="dhtmlxEditCol"><input type="checkbox" name="access_subscriberEdit" id="access_subscriberEdit" class="dhtmlxInputCheckbox" serialize="true" /></td>
+				</tr>
+				
+				<tr>
+					<td class="dhtmlxLeftCol" locale="contributor">Contributor</td>
+					<td class="dhtmlxViewCol"><input type="checkbox" name="access_contributorView" id="access_contributorView" class="dhtmlxInputCheckbox" serialize="true" /></td>
+					<td class="dhtmlxAddCol"><input type="checkbox" name="access_contributorAdd" id="access_contributorAdd" class="dhtmlxInputCheckbox" serialize="true" /></td>
+					<td class="dhtmlxEditCol"><input type="checkbox" name="access_contributorEdit" id="access_contributorEdit" class="dhtmlxInputCheckbox" serialize="true" /></td>
+				</tr>
+				
+				<tr>
+					<td class="dhtmlxLeftCol" locale="author">Author</td>
+					<td class="dhtmlxViewCol"><input type="checkbox" name="access_authorView" id="access_authorView" class="dhtmlxInputCheckbox" serialize="true" /></td>
+					<td class="dhtmlxAddCol"><input type="checkbox" name="access_authorAdd" id="access_authorAdd" class="dhtmlxInputCheckbox" serialize="true" /></td>
+					<td class="dhtmlxEditCol"><input type="checkbox" name="access_authorEdit" id="access_authorEdit" class="dhtmlxInputCheckbox" serialize="true" /></td>
+				</tr>
+				
+				<tr>
+					<td class="dhtmlxLeftCol" locale="editor">Editor</td>
+					<td class="dhtmlxViewCol"><input type="checkbox" name="access_editorView" id="access_editorView" class="dhtmlxInputCheckbox" serialize="true" /></td>
+					<td class="dhtmlxAddCol"><input type="checkbox" name="access_editorAdd" id="access_editorAdd" class="dhtmlxInputCheckbox" serialize="true" /></td>
+					<td class="dhtmlxEditCol"><input type="checkbox" name="access_editorEdit" id="access_editorEdit" class="dhtmlxInputCheckbox" serialize="true" /></td>
+				</tr>
+				
+				<tr>
+					<td class="dhtmlxLeftColBottom" locale="administrator">Administrator</td>
+					<td class="dhtmlxViewColBottom"><input type="checkbox" name="access_administratorView" id="access_administratorView" class="dhtmlxInputCheckbox" serialize="true" /></td>
+					<td class="dhtmlxAddColBottom"><input type="checkbox" name="access_administratorAdd" id="access_administratorAdd" class="dhtmlxInputCheckbox" serialize="true" /></td>
+					<td class="dhtmlxEditColBottom"><input type="checkbox" name="access_administratorEdit" id="access_administratorEdit" class="dhtmlxInputCheckbox" serialize="true" /></td>
+				</tr>
+			</table>
+		</div>
+	</div>
+	<div class="dhtmlxAccessDiv" id="access_joomla_div">
+		<div class="dhtmlxSettingPanel">
+			<div class="dhtmlxSettingPanelLabel" locale="access">Access rights</div>
+			<table class="dhtmlxAccessTable">
+				<tr>
+					<th class="dhtmlxLeftCol">&nbsp;</th>
+					<th class="dhtmlxViewCol" locale="view">View</th>
+					<th class="dhtmlxAddCol" locale="add">Add</th>
+					<th class="dhtmlxEditCol" locale="edit">Edit</th>
+				</tr>
+				<tr>
+					<td class="dhtmlxLeftCol" locale="guests">Guests</td>
+					<td class="dhtmlxViewCol"><input type="checkbox" name="access_guestView_j" id="access_guestView_j" class="dhtmlxInputCheckbox" serialize="true" /></td>
+					<td class="dhtmlxAddCol"><input type="checkbox" name="access_guestAdd_j" id="access_guestAdd_j" class="dhtmlxInputCheckbox" serialize="true" /></td>
+					<td class="dhtmlxEditCol"><input type="checkbox" name="access_guestEdit_j" id="access_guestEdit_j" class="dhtmlxInputCheckbox" serialize="true" /></td>
+				</tr>
+				
+				<tr>
+					<td class="dhtmlxLeftCol" locale="registred">Registered</td>
+					<td class="dhtmlxViewCol"><input type="checkbox" name="access_registeredView_j" id="access_registeredView_j" class="dhtmlxInputCheckbox" serialize="true" /></td>
+					<td class="dhtmlxAddCol"><input type="checkbox" name="access_registeredAdd_j" id="access_registeredAdd_j" class="dhtmlxInputCheckbox" serialize="true" /></td>
+					<td class="dhtmlxEditCol"><input type="checkbox" name="access_registeredEdit_j" id="access_registeredEdit_j" class="dhtmlxInputCheckbox" serialize="true" /></td>
+				</tr>
+				
+				<tr>
+					<td class="dhtmlxLeftCol" locale="author"></td>
+					<td class="dhtmlxViewCol"><input hidden type="checkbox" name="access_authorView_j" id="access_authorView_j" class="dhtmlxInputCheckbox" serialize="true" /></td>
+					<td class="dhtmlxAddCol"><input hidden type="checkbox" name="access_authorAdd_j" id="access_authorAdd_j" class="dhtmlxInputCheckbox" serialize="true" /></td>
+					<td class="dhtmlxEditCol"><input hidden type="checkbox" name="access_authorEdit_j" id="access_authorEdit_j" class="dhtmlxInputCheckbox" serialize="true" /></td>
+				</tr>
+				
+				<tr>
+					<td class="dhtmlxLeftCol" locale="editor"></td>
+					<td class="dhtmlxViewCol"><input hidden type="checkbox" name="access_editorView_j" id="access_editorView_j" class="dhtmlxInputCheckbox" serialize="true" /></td>
+					<td class="dhtmlxAddCol"><input hidden type="checkbox" name="access_editorAdd_j" id="access_editorAdd_j" class="dhtmlxInputCheckbox" serialize="true" /></td>
+					<td class="dhtmlxEditCol"><input hidden type="checkbox" name="access_editorEdit_j" id="access_editorEdit_j" class="dhtmlxInputCheckbox" serialize="true" /></td>
+				</tr>
+				
+				<tr>
+					<td class="dhtmlxLeftCol" locale="publisher"></td>
+					<td class="dhtmlxViewCol"><input hidden type="checkbox" name="access_publisherView_j" id="access_publisherView_j" class="dhtmlxInputCheckbox" serialize="true" /></td>
+					<td class="dhtmlxAddCol"><input hidden type="checkbox" name="access_publisherAdd_j" id="access_publisherAdd_j" class="dhtmlxInputCheckbox" serialize="true" /></td>
+					<td class="dhtmlxEditCol"><input hidden type="checkbox" name="access_publisherEdit_j" id="access_publisherEdit_j" class="dhtmlxInputCheckbox" serialize="true" /></td>
+				</tr>
+				
+				<tr>
+					<td class="dhtmlxLeftCol" locale="manager"></td>
+					<td class="dhtmlxViewCol"><input hidden type="checkbox" name="access_managerView_j" id="access_managerView_j" class="dhtmlxInputCheckbox" serialize="true" /></td>
+					<td class="dhtmlxAddCol"><input hidden type="checkbox" name="access_managerAdd_j" id="access_managerAdd_j" class="dhtmlxInputCheckbox" serialize="true" /></td>
+					<td class="dhtmlxEditCol"><input hidden type="checkbox" name="access_managerEdit_j" id="access_managerEdit_j" class="dhtmlxInputCheckbox" serialize="true" /></td>
+				</tr>
+				
+				<tr>
+					<td class="dhtmlxLeftCol" locale="administrator">Administrator</td>
+					<td class="dhtmlxViewCol"><input type="checkbox" name="access_administratorView_j" id="access_administratorView_j" class="dhtmlxInputCheckbox" serialize="true" /></td>
+					<td class="dhtmlxAddCol"><input type="checkbox" name="access_administratorAdd_j" id="access_administratorAdd_j" class="dhtmlxInputCheckbox" serialize="true" /></td>
+					<td class="dhtmlxEditCol"><input type="checkbox" name="access_administratorEdit_j" id="access_administratorEdit_j" class="dhtmlxInputCheckbox" serialize="true" /></td>
+				</tr>
+				
+				<tr>
+					<td class="dhtmlxLeftColBottom" locale="superadministrator"></td>
+					<td class="dhtmlxViewColBottom"><input hidden type="checkbox" name="access_superadministratorView_j" id="access_superadministratorView_j" class="dhtmlxInputCheckbox" serialize="true" /></td>
+					<td class="dhtmlxAddColBottom"><input hidden type="checkbox" name="access_superadministratorAdd_j" id="access_superadministratorAdd_j" class="dhtmlxInputCheckbox" serialize="true" /></td>
+					<td class="dhtmlxEditColBottom"><input hidden type="checkbox" name="access_superadministratorEdit_j" id="access_superadministratorEdit_j" class="dhtmlxInputCheckbox" serialize="true" /></td>
+				</tr>
+			</table>
+		</div>
+	</div>
+	<div id="privatemode_cont">
+		<label for="privatemode" class="dhtmlxInputLabel" locale="privatemode" style="float: left; width: 20%;">&nbsp;</label>
+		<select name="private mode" id="privatemode" style="float: left;" serialize="true" value="off">
+<!--
+			<option value="off" locale="off">&nbsp;</option>
+-->
+			<option value="on" locale="privatemode">&nbsp;</option>
+<!--
+			<option value="ext" locale="privatemodeext">&nbsp;</option>
+-->
+		</select>
+	</div>
+</body>
+</html>

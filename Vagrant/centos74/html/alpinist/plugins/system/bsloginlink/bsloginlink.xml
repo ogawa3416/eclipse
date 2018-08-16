@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="system" method="upgrade">
+	<name>PLG_SYSTEM_BSLOGINLINK</name>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<author>GROON solutions.</author>
+	<authorEmail>infodesk@groon.co.jp</authorEmail>
+	<authorUrl>www.groon.co.jp</authorUrl>
+	<creationDate>2013/07/01</creationDate>
+	<copyright>Copyright (C) 2010 - 2011 GROON solutions. All rights reserved.</copyright>
+	<version>3.0.0</version>
+	<description>PLG_SYSTEM_BSLOGINLINK_XML_DESCRIPTION</description>
+	<files>
+		<filename plugin="bsloginlink">bsloginlink.php</filename>
+		<filename>index.html</filename>
+	</files>
+	<languages>
+		<language tag="en-GB">en-GB.plg_system_bsloginlink.sys.ini</language>
+		<language tag="en-GB">en-GB.plg_system_bsloginlink.ini</language>
+		<language tag="ja-JP">ja-JP.plg_system_bsloginlink.sys.ini</language>
+		<language tag="ja-JP">ja-JP.plg_system_bsloginlink.ini</language>
+	</languages>
+  <config>
+	<fields name="params">
+	  <fieldset name="basic">
+		<field name="login_required" type="list" default="0" label="BSLG_LOGIN_REQUIRED" description="BSLG_LOGIN_REQUIRED_DESC">
+			<option value="0">JNo</option>
+			<option value="1">JYes</option>
+		</field>
+	  </fieldset>
+	</fields>
+  </config>
+</extension>

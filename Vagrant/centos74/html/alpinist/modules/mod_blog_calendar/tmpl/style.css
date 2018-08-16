@@ -1,0 +1,110 @@
+table.blogCalendar{
+/* style for all the calendar table */
+padding: 0;
+margin: 0;
+font: normal 12px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+color: #000000;
+text-align: center; 
+border-collapse: collapse;
+}
+table.blogCalendar tr{ height:24px;}
+td.blogCalendarHeader {
+/* the style for The calendar header, this includes the two link arrows and the date*/
+margin: 0;
+padding: 0;
+background: #616D7E;
+color: #fff; 
+font: bold 12px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+text-align: center;
+}
+
+td.headerDate{
+/* td style for the header date (ex. December 2007)*/ 
+background: #616D7E;
+}
+
+a.headerDate{
+/* link style for the header date */
+text-align: center;
+text-decoration: none;
+}
+
+a.headerDate:link, a.headerDate:visited {
+    color: #FFFFFF;
+}
+td.headerArrow{
+/*td the style for the header link arrows */ 
+background: #616D7E;
+}
+
+a.headerArrow{
+/*link style for the header link arrows*/
+font-size: 18px ;
+font-weight:bold;
+color: #3BB9FF; 
+text-align: center;
+text-decoration: none;
+display:inline-block;
+margin-top: 2px;
+}
+a.headerArrow i.iconrevers {transform: rotateY( 180deg );}
+a.headerArrow:hover,a.headerArrow:focus{ padding:0px 0; }
+td.dayName{
+/*td style of the day abreviations (S M T W T F S) */
+font: bold 12px/20px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+color: #616B76;
+background: #FFFFFF;
+}
+
+td.blogCalendarDay {
+border: 1px solid #DDDDDD;
+background: none repeat scroll 0 0 #FFFFFF;
+width: 9%;
+height: 25px;
+text-align: center;
+}
+
+a.blogCalendarDay{
+/* style for a normal link in the calendar (that is not in the actual day) */
+text-decoration: underline;
+font: bold 12px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+color: #DF9496; text-decoration: none;
+font-weight: bold;
+display: block;
+}
+.blogCalendar td.blogCalendarDayEmpty {
+background: #F5F5DC;
+height: 25px;
+}
+.blogCalendar td.blogCalendarLink {
+color: #F6F4DA;
+font-weight: bold;
+background: #FFFFFF;
+}
+.blogCalendar td.highlight {
+color: #F6F4DA;
+font-weight: bold;
+background: #7BA428;
+}
+.blogCalendar td.blogCalendarToday {
+/* the style for Today day */
+background: #FAAFBE;
+}
+.blogCalendar td.highlight .blogCalendarToday:link,.blogCalendar td.highlight .blogCalendarToday:visited {
+color: #F6F4DA;
+}
+a.blogCalendarToday {
+/* link style for a link that is in the actual day */
+font: bold 12px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+color: #6aa3ae;
+}
+.droplist {
+list-style: none;
+background: #FFFFFF;
+}
+
+.blogCalendarDay a {
+    display: block;
+    padding: 0px 0;
+    line-height: 25px;
+}

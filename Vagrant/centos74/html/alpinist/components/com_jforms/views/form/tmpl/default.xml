@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+* XML settings for Form Element
+*
+* @version		$Id: default.xml 28 2008-12-09 07:14:08Z dr_drsh $
+* @package		Joomla
+* @subpackage	JForms
+* @copyright	Copyright (C) 2008 Mostafa Muhammad. All rights reserved.
+* @license		GNU/GPL
+-->
+<metadata>
+	<layout title="JFORMS_STANDARD_FORM_LAYOUT">
+		<message>
+			<![CDATA[JFORMS_STANDARD_FORM_LAYOUT_DESC]]>
+		</message>
+	</layout>
+	<fields name="request">
+	  <fieldset name="request">
+		  <field 
+		  		name="id" 
+				type="form" 
+				default="0"
+				addfieldpath="/administrator/components/com_jforms/elements"
+				label="Select_Form"
+				description="Select_Form">
+		  </field>
+	  </fieldset>
+	</fields>
+	<fields name="params">
+	  <fieldset name="basic">
+	  	<field name="workflow" type="radio" default="0" label="Using_Workflow" description="YES_when_you_use_a_workflow">
+			<option value="0">JNo</option>
+			<option value="1">JYes</option>
+		</field>
+	  </fieldset>
+	</fields>
+</metadata>

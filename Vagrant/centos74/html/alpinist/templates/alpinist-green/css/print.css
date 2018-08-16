@@ -1,0 +1,71 @@
+/**
+ * @author Design & Accessible Team ( Angie Radtke / Robert Deutz )
+ * @package Joomla
+ * @subpackage Accessible-Template-Beez
+ * @copyright Copyright (C) 2005 - 2008 Open Source Matters. All rights reserved.
+ * @license GNU/GPL, see LICENSE.php
+ * Joomla! is free software. This version may have been modified pursuant to the
+ * GNU General Public License, and as distributed it includes or is derivative
+ * of works licensed under the GNU General Public License or other free or open
+ * source software licenses. See COPYRIGHT.php for copyright notices and
+ * details.
+ */
+#all {width:763px;}
+a
+{
+
+      font-weight: bold;
+}
+
+.unseen,
+#line,
+#header,
+#breadcrumbs,
+.article-info-term,
+ul.actions,
+#close,
+.display-limit,
+.moduletable_menu,
+.moduletable_js,
+.tabouter,
+#bottom,
+.pagination,
+#footer,
+#header-image,
+#alpinistver,
+#suckerfish,
+.display,
+.pagenavline,
+.pagebox,
+ul.pagenav li.pagenav-prev,
+ul.pagenav li.pagenav-next,
+.mainBorder #jumpdate,
+.content_vote,
+.print-icon,
+.button,
+input[type="button"],
+.user1user2,
+.left,
+.right,
+.dhx_cal_navline,
+.hdselectlist #username
+
+{
+      display: none;
+}
+
+.contact-email div
+{
+	overflow:hidden
+}
+
+.login div
+{
+	overflow:hidden
+}
+
+table.category {width: 100%;}
+#main {float:none;width:100%;}
+.modal-backdrop.fade.in {opacity:1!important;}
+
+ 

@@ -1,0 +1,90 @@
+
+/** Table styles **/
+.userblock {margin:20px;font-size:12px}
+.userblock select{font-size:12px}
+.userblock table.mainselector {margin:0;}
+table.userlist { border:1px solid #DDDDDD;margin:2px 0;}
+table.userlist th{
+	font-size: 11px;
+	padding: 1px 5px;
+	background: none repeat scroll 0 0 #444444;
+    color: #FFFFFF;
+	height: 24px;
+}
+table.userlist td{border-bottom: 1px solid #DDDDDD;padding:2px;}
+table.userlist {width:100%;border-spacing: 1px;}
+
+p.counter {font-weight:bold;margin:0;text-align:right;padding:5px;}
+form .pagenavline {text-align:center;padding:5px 0;}
+form .pagenav {padding:5px 10px;font-weight:bold;}
+
+td table {
+    /** Inner table
+    * IE8+
+    *-------------------------------------*/
+    border-spacing: 1px;
+    /* Start fixing: no boder shown (2 tables used), if parent element uses border-collapse: collapse, force separated border 
+       as spacing will display background color. This makes it look like a table border
+    */
+    border-collapse: separate; 
+    /* End fixing: by Prasit Gebsaap */        
+}
+form .display {line-height:1em;vertical-align:middle;text-align:right;}
+tr.bstableentry1 td {padding: 6px 4px;}
+tr.bstableentry2 td {padding: 6px 4px;background: #ECECEC;}
+tr.bstableentry1:hover td,
+tr.bstableentry2:hover td {background: #FFFFCC;}
+tr.bstableentry0 td,
+tr.bstableentry1 td,
+tr.bstableentry2 td {padding: 6px 4px!important;}
+.memberblk1 select, .memberblk3 select {width:100%!important;}
+.memberblk2 div {text-align:center;padding:2px 0;}
+.memberblk3 #dselectlist {padding-right:0;}
+.memberblk4 {padding:8px;}
+.memberblk4 input {dispaly:block;vertical-align:middle;}
+.mainselector .display {margin:0;}
+#membersblock #memberslist {height:120px;}
+#membersblock select {height:auto;}
+.dhx_cal_larea input {height:auto;line-height:14px;margin: auto;}
+.dhx_cal_larea input[type="text"] {height:19px;}
+#schdlboard {background-color: #EEE;padding: 0 0 2px 2px;}
+.dhx_cal_light select {border: 1px solid #CCCCCC; }
+#bsschfilter #bssfilblock1 {display:inline-block;padding-right: 10px;}
+#bsschfilter #bssfilblock1 #userlabel {display: inline;}
+#bsschfilter #bssfilblock1 #useridx {width:48%;}
+#bsschfilter #bssfilblock1 > a {display:inline-block;z-index: 100;padding: 4px 0;}
+#bsschfilter #bssfilblock2 {display:inline-block;}
+#bsschfilter #bssfilblock2 label {display:inline-block;}
+#bsschfilter #bssfilblock2 #divname {display:inline-block;}
+#bsschfilter #bssfilblock3 {display:inline-block;text-align: right;float: right;}
+#mbmemlist {display:none;}
+#registrant {padding-left:10px;}
+.userblock #divcode {min-width:100px;}
+.dhx_cal_larea .dhx_section_time input.dhx_readonly {width: 100px;margin-bottom: 0;}
+.dhx_cal_larea .dhx_section_time select {height: 25px;}
+.dhx_cal_larea .dhx_schplan select {height: 25px;}
+
+#uselectlist{
+height: 100px;
+overflow-y: scroll;
+overflow-x: hidden;
+border: 1px solid #CCCCCC;
+cursor: pointer}
+#memberslist{
+overflow-y: scroll;
+overflow-x: hidden;
+border: 1px solid #CCCCCC;
+cursor: pointer}
+div.dhx_cal_data > div {
+	border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	line-height: 14px;
+}
+#membersblock {font-size:11px;}
+#membersblock .memberblk4 input[type="checkbox"] {margin-left: 10px;margin-top: 0;margin-right: 2px;}
+#membersblock .memberblk1 #memberslist div,
+#membersblock .memberblk3 #uselectlist div {white-space: nowrap;overflow-x: hidden;}
+#membersblock #uselectlist div.dismode {background: #ccc;}
+#membersblock #memberslist.dismode {background: #ccc;}
+#memberslist > div,#uselectlist > div {padding-left:4px}

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="COM_BSBOOKING_SCHEDULECAL_ADMINTTL">
+		<message>
+			<![CDATA[COM_BSBOOKING_SCHEDULECAL_DESC]]>
+		</message>
+	</layout>
+	<fields name="request">
+	  <fieldset name="request">
+		  <field 
+		  		name="id" 
+				type="sql" 
+				key_field="key_field" 
+				value_field="value_field"
+				query="SELECT id as key_field, title as value_field FROM #__bs_schedules WHERE published = 1 ORDER BY title ASC"
+				label="SELECT_SCHEDULE_TO_DISPLAY"
+				description="COM_BSBOOKING_LINKS_MENU_DESC">
+		  </field>
+	  </fieldset>
+	</fields>
+	<fields name="params">
+	  <fieldset name="basic">
+	    <field name="alldivision" type="radio" default="0" label="SHOW_ALL_OF_DIVISION" description="COM_BSBOOKING_SHOW_ALL_DIVISION_DESC">
+			<option value="0">JNo</option>
+			<option value="1">JYes</option>
+		</field>
+	  </fieldset>
+	  <fieldset name="advanced" label="COM_BSBOOKING_ADVANCED_FIELDSET_LABEL">
+        <field name="prefixNameOnSummary" type="radio" default="" label="COM_BSBOOKING_PREFIX_NAME" description="COM_BSBOOKING_PREFIX_NAME_DESC">
+            <option value="">JGLOBAL_USE_GLOBAL</option>
+			<option value="0">JNo</option>
+            <option value="1">JYes</option>
+        </field>
+        <field name="privacyMode" type="radio" default="" label="COM_BSBOOKING_PRIV_RESERVATION" description="COM_BSBOOKING_PRIV_RESERVATION_DESC">
+            <option value="">JGLOBAL_USE_GLOBAL</option>
+			<option value="0">JNo</option>
+            <option value="1">JYes</option>
+        </field>
+        <field name="readOnlySummary" type="radio" default="" label="COM_BSBOOKING_READONLY_SCH" description="COM_BSBOOKING_READONLY_SCH_DESC">
+            <option value="">JGLOBAL_USE_GLOBAL</option>
+			<option value="0">JNo</option>
+            <option value="1">JYes</option>
+        </field>      
+        <field name="readOnlyDetail" type="radio" default="" label="COM_BSBOOKING_READONLY_SCH_DETAIL" description="COM_BSBOOKING_READONLY_SCH_DETAIL_DESC">
+            <option value="">JGLOBAL_USE_GLOBAL</option>
+			<option value="0">JNo</option>
+            <option value="1">JYes</option>
+        </field>
+        <field name="topNavigation" type="radio" default="" label="COM_BSBOOKING_TOPNAVI" description="COM_BSBOOKING_TOPNAVI_DESC">
+            <option value="">JGLOBAL_USE_GLOBAL</option>
+			<option value="0">JNo</option>
+            <option value="1">JYes</option>
+        </field>
+        <field name="customTooltip" type="radio" default="" label="COM_BSBOOKING_CUSTOMTOOL" description="COM_BSBOOKING_CUSTOMTOOL_DESC">
+            <option value="">JGLOBAL_USE_GLOBAL</option>
+			<option value="0">JNo</option>
+        </field>
+        <field name="spacer1" type="spacer" hr="true" />
+        <field name="my_res_color" type="text" default="" label="COM_BSBOOKING_MY_COLOR" description="COM_BSBOOKING_MY_COLOR_DESC" />
+        <field name="my_res_text" type="text" default="" label="COM_BSBOOKING_MY_COLOR_TEXT"/>
+        
+        <field name="my_past_res_color" type="text" default="" label="COM_BSBOOKING_MYPAST_COLOR" description="COM_BSBOOKING_MYPAST_COLOR_DESC" />
+        <field name="my_past_res_text" type="text" default="" label="COM_BSBOOKING_MYPAST_COLOR_TEXT"/>
+                
+        <field name="other_res_color" type="text" default="" label="COM_BSBOOKING_OTHER_COLOR" description="COM_BSBOOKING_OTHER_COLOR_DESC" />
+        <field name="other_res_text" type="text" default="" label="COM_BSBOOKING_OTHER_COLOR_TEXT"/>
+        
+        <field name="other_past_res_color" type="text" default="" label="COM_BSBOOKING_OTHERPAST_COLOR" description="COM_BSBOOKING_OTHERPAST_COLOR_DESC" />
+        <field name="other_past_res_text" type="text" default="" label="COM_BSBOOKING_OTHERPAST_COLOR_TEXT"/>
+	  </fieldset>
+	</fields>
+</metadata>

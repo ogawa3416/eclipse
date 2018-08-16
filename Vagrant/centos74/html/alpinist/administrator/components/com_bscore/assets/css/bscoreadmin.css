@@ -1,0 +1,56 @@
+/* -- form validation */
+.invalid { border-color: #ff0000; }
+label.invalid { color: #ff0000; }
+table.admintable td.key,
+table.admintable td.paramlist_key {
+	text-align: right;
+	width: 140px;
+	color: #666;
+	font-weight: bold;
+	min-width:140px;
+}
+fieldset label,fieldset span,fieldset input {
+display:inline!important;
+float:none!important;
+}
+.admintable td input,.adminform .admintable td label{
+font-size:12px!important;
+}
+.admintable td input {
+margin:0px 5px 0px 0px!important;
+}
+label {display: inline-block!important;}
+.container-fluid {padding-right:0px!important;}
+table.adminlist {
+    background-color: #F3F3F3;
+    border-spacing: 1px;
+    color: #666666;
+    width: 100%;
+}
+table.adminlist th, table.adminlist td {
+    border-top: 1px solid #DDDDDD;
+    line-height: 18px;
+    padding: 8px 0 8px 8px;
+    text-align: left;
+    vertical-align: top;
+}
+table.adminlist thead th {
+    background: none repeat scroll 0 0 #F7F7F7;
+    border-bottom: 1px solid #CCCCCC;
+    border-left: 1px solid #FFFFFF;
+    color: #666666;
+    height:19px;
+    border-top: 0 none;
+}
+table.adminlist tfoot td {
+    background: none repeat scroll 0 0 #F7F7F7;
+    border-left: 1px solid #FFFFFF;
+    color: #666666;
+}
+table.adminlist td {
+    padding-left: 8px;
+}
+.adminlist input[type="radio"], .adminlist input[type="checkbox"] {margin-top:-2px;}
+#adminForm select {margin-bottom: 5px;}
+iframe {border: 0 none;}
+.modal-header {display:none;}

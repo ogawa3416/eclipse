@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+* XML config file for HTML plugin
+*
+* @version		$Id: parameters.xml 401 2010-08-08 13:56:12Z dr_drsh $
+* @package		Joomla
+* @subpackage	JForms
+* @copyright	Copyright (C) 2008 Mostafa Muhammad. All rights reserved.
+* @license		GNU/GPL
+-->
+<form>
+	<name>HTML plugin parameters</name>
+	<params>
+		<param name="hash" class='id' description='JFORMSPLUGINFIELDID'  label="ID" type="text" valueType='string' default='' translate='0' />
+		<param name="htmlValue" description='JFORMSHTMLVALUE' label="HTML_Code" type="hidden" default='SGVsbG8gd29ybGQ=' valueType='string' translate='1' />
+		<param name="css" description='JFORMSPLUGINFIELDCSS' label="CSS_Class" type="text" default='jfhtml' valueType='string' translate='0' />
+	</params>
+</form>

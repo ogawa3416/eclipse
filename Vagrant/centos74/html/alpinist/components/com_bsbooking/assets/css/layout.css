@@ -1,0 +1,273 @@
+/* Layout stylesheet */
+
+#col-a {
+  float: right;
+  width: 100%;
+}
+#col-a[id] { /* [2] */
+  margin-left: -1px;
+}
+#col-b {
+  float: left;
+  margin-left: -12em;
+  z-index: 10; /* [3] */
+}
+#col-b[id] { /* [2] */
+  margin-right: 1px;
+}
+#col-c {
+  float: right;
+  margin-right: -12em;
+  z-index: 11; /* [3] */
+}
+#col-c[id] { /* [2] */
+  margin-left: 1px;
+}
+.show-all #columns {
+  padding: 0 12em;
+}
+.hide-left #columns {
+  padding: 0 12em 0 0;
+}
+/**.hide-right #columns {
+  padding: 0 0 0 12em;
+} **/
+.cols-wrapper {
+  width: 100%;
+}
+.cols-wrapper[class] {
+  padding-bottom: 0.1px; /* [4] */
+}
+.float-wrapper {
+  float: left;
+  width: 100%;
+  position: relative;
+  z-index: 0;
+}
+.float-wrapper[class] { /* [2] */
+  margin-right: -1px;
+}
+.sidecol {
+  position: relative;
+  width: 12em;
+  overflow: hidden;
+}
+.box,
+.main-content {
+  margin: 0 1em;
+}
+.clear {
+  clear: both;
+}
+.none {
+  display: none;
+}
+
+/*
+  [1] Play nice with EMs in Opera 6 and IE Win.
+  [2] Support for Mozilla, but IE doesn't likes it.
+  [3] Z indices needed for link clickability in IE Mac and Opera 6.
+  [4] Mozilla needs a non zero value, seems to be a bug.
+*/
+
+div.jm-toggle-container {
+}
+/* ------ START MENU----- */
+div.bsbooking-navbox {
+	position: relative;
+	padding: 1px;
+    width:185px;
+	overflow:hidden;
+}
+.bsbooking-navbox ul li{
+	list-style-type: none;
+	margin:0;
+	padding: 0;
+}
+
+.bsbooking-navbox a {
+	color: #922926;
+	text-decoration: none;
+	border-bottom: 1px solid #F0F0F0;
+	display: block;
+}
+div.bsbooking-navbox ul{        
+	margin:0;        
+	padding:0;        
+	list-style:none;
+}
+div.bsbooking-navbox li{
+	width:180px;        
+	display:inline-block;        
+	text-align:left;
+}
+#bsbooking-version {
+    text-align: center;
+}
+/* END OF MENU */
+
+/** toolbar header **/
+div.header {
+	font-size: 22px; font-weight: bold; line-height: 48px;
+	background-repeat: no-repeat;
+	margin-left: 10px;
+}
+
+div.header span { color: #666; }
+div#toolbar { float: right; text-align: right; padding: 0; }
+
+div#toolbar            { border-collapse: collapse; padding: 0; margin: 0;    }
+div#toolbar li         { margin:0; padding: 1px 1px 1px 4px; text-align: center; color: #666; height: 48px;list-style-type:none;float:left; }
+div#toolbar li.spacer  { width: 10px; }
+div#toolbar li.divider { border-right: 1px solid #eee; width: 5px; }
+
+
+div#toolbar span { float: none; width: 32px; height: 32px; margin: 0 auto; display: block; }
+
+div#toolbar a {
+   display: block; float: left;
+   white-space: nowrap;
+   border: 1px solid #fbfbfb;
+   padding: 1px 5px;
+   cursor: pointer;
+}
+
+div#toolbar a:hover {
+   border-left: 1px solid #eee;
+   border-top: 1px solid #eee;
+   border-right: 1px solid #ccc;
+   border-bottom: 1px solid #ccc;
+   text-decoration: none;
+   color: #0B55C4;
+}
+
+.mainBorder .ButtonInput { margin-top:-5px; }
+
+/** Fixed conflict style with Car_Garvik Template */
+td.button {
+    background: none; 
+}
+/******END of FIX *********************************/
+/** toolbar icons **/
+.icon-32-send          { background-image: url(../images/toolbar/icon-32-send.png); }
+.icon-32-delete       { background-image: url(../images/toolbar/icon-32-delete.png); }
+.icon-32-help          { background-image: url(../images/toolbar/icon-32-help.png); }
+.icon-32-cancel       { background-image: url(../images/toolbar/icon-32-cancel.png); }
+.icon-32-config       { background-image: url(../images/toolbar/icon-32-config.png); }
+.icon-32-apply       { background-image: url(../images/toolbar/icon-32-apply.png); }
+.icon-32-back         { background-image: url(../images/toolbar/icon-32-back.png); }
+.icon-32-forward      { background-image: url(../images/toolbar/icon-32-forward.png); }
+.icon-32-save          { background-image: url(../images/toolbar/icon-32-save.png); }
+.icon-32-edit          { background-image: url(../images/toolbar/icon-32-edit.png); }
+.icon-32-copy          { background-image: url(../images/toolbar/icon-32-copy.png); }
+.icon-32-move          { background-image: url(../images/toolbar/icon-32-move.png); }
+.icon-32-new          { background-image: url(../images/toolbar/icon-32-new.png); }
+.icon-32-upload       { background-image: url(../images/toolbar/icon-32-upload.png); }
+.icon-32-assign       { background-image: url(../images/toolbar/icon-32-publish.png); }
+.icon-32-html          { background-image: url(../images/toolbar/icon-32-html.png); }
+.icon-32-css          { background-image: url(../images/toolbar/icon-32-css.png); }
+.icon-32-menus          { background-image: url(../images/toolbar/icon-32-menu.png); }
+.icon-32-publish       { background-image: url(../images/toolbar/icon-32-publish.png); }
+.icon-32-unpublish    { background-image: url(../images/toolbar/icon-32-unpublish.png);}
+.icon-32-restore      { background-image: url(../images/toolbar/icon-32-revert.png); }
+.icon-32-trash       { background-image: url(../images/toolbar/icon-32-trash.png); }
+.icon-32-archive       { background-image: url(../images/toolbar/icon-32-archive.png); }
+.icon-32-unarchive    { background-image: url(../images/toolbar/icon-32-unarchive.png); }
+.icon-32-preview       { background-image: url(../images/toolbar/icon-32-preview.png); }
+.icon-32-default       { background-image: url(../images/toolbar/icon-32-default.png); }
+/** header icons **/
+//.icon-48-generic       { background-image: url(../images/header/icon-48-generic.png); }
+/** schedul header layout **/
+.hdselectlist		{vertical-align:baseline;display:inline-block;padding-bottom: 2px;}
+.hdselectlist label	{float: none!important;}
+.jump_link			{line-height:20px;}
+table.color-key		{width:320px;float: right;}
+table.reservation_tbl	{ border:1px solid #eee;}
+#toolbar-box {margin-top: -5px;}
+#toolbar-box #jumpdate label {margin-left:30px;}
+#toolbar-box table .hdselectlist{text-align:middle;padding-right: 20px;}
+#toolbar-box #toolbar {position:relative;top:-18px;}
+#toolbar-box form {margin-bottom: 0;}
+.bookingview {position:relative;margin-bottom: 10px;}
+.bookingview .sch_title {position:relative;top:0px;left:5px;text-align:left;width: 300px;}
+.bookingview .sch_title h3 {margin-bottom: 0;}
+#jm-myres-dashboard {border:0;}
+form .display {line-height:1em;vertical-align:middle;text-align:right;}
+tr.bstableentry1 td {padding: 6px 4px;}
+tr.bstableentry2 td {padding: 6px 4px;background:#ECECEC;}
+tr.bstableentry1:hover td,
+tr.bstableentry2:hover td {background:#FFFFCC;}
+tr.bstableentry0 td,
+tr.bstableentry1 td,
+tr.bstableentry2 td {padding: 6px 4px!important;}
+#resform .resbuton {margin-left:20px;margin-top:5px;}
+#resform input[type="checkbox"] {margin:0 4px 2px;vertical-align: middle;}
+
+.msgform {padding:20px;}
+.formNames {width:130px;}
+#memberselector {margin:10px 10px;font-size: 12px;}
+#memberselector select {font-size: 12px;}
+#memberselector select#memberslist {height:100%;}
+#memberselector select#uselectlist {height:100%;} 
+#memberselector #bsbtitleblk {font-size: 14px; font-weight: bold; line-height: 24px;}
+#memberselector #memberslist,#memberselector #uselectlist,#memberselector #divcode {width:100%;}
+#memberselector .memberblk1,.memberblk3 {vertical-align:top;}
+#memberselector .memberblk2 .bsbeditbtn {text-align:center;padding:5px 0;}
+#memberselector .memberblk4 input {vertical-align:middle;line-height:1em;}
+#selecttable {height:170px;}
+#selecttable td {padding: 0 4px;}
+#repeat_table {margin:2px 4px 0 0;width: 100%;}
+#mylistbtn {float: right;margin-right: 5px;margin-bottom: 4px;}
+#jm-myres-dashboard #opebtn {float: right;margin-left: 10px;margin-top: -5px;}
+.memberblk4 {margin-bottom:10px;}
+#bsbmailcheck #emsend {margin-left:20px;}
+#bkmainbox {float:left;min-width: 47%;}
+#sch_checkbox {min-width:47%;float: right;}
+#bkptblock {margin:5px 0 10px;}}
+#bkptblock #subtitle {margin-bottom:5px;}
+.recur_box td {padding-left:10px;}
+.recur_box fieldset {margin-top:0px;padding:0;}
+#until_lab, #div_repeat_until {display:inline-block;}
+#until_div {margin-bottom:10px;}
+#days > div {margin:5px 0;}
+.category th {height:2em;}
+.category #bsscatlab1 {width:3%;text-align:center;}
+.category #bsscatlab2 {width:5%;text-align:center;}
+.category #bsscatlab3 {width:auto;}
+.category #bsscatlab4 {width:80px;}
+.category #bsscatlab5 {width:80px;}
+.category #bsscatlab6 {width:80px;}
+.category #bsscatlab7 {width:auto;}
+.category .bsscatcal1 {text-align:center;}
+.category .bsscatcal2 {text-align:center;}
+.tableBorder2 #start_time,
+.tableBorder2 #end_time {width:72px;display:block;}
+.tableBorder2 .dateblock {text-align: center;}
+.tableBorder2 .dateblock #div_start_date,
+.tableBorder2 .dateblock #div_end_date {text-align: right;}
+.tableBorder2 .dateblock a.datesubblock {width:30%;text-align: left;display: inline-block;}
+#uselectlist{
+	height: 100px;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	border: 1px solid #CCCCCC;
+	cursor: pointer;
+	white-space: nowrap;
+}
+#memberslist{
+	height: 134px;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	border: 1px solid #CCCCCC;
+	cursor: pointer;
+	white-space: nowrap;
+	min-width: 100px;
+}
+.memberblk4 #bsbmailcheck  input[type="checkbox"] {margin:0px 4px;}
+@media (max-width: 767px) {
+	#memberslist div,
+	#uselectlist div {line-height:24px;}
+}
+#dayslab .fa-check-circle{color: #f89406;margin-right: 1px;}
+.dayow_label{display: inline-block;}
+#until_div .fa-calendar{margin-left: 3px;}

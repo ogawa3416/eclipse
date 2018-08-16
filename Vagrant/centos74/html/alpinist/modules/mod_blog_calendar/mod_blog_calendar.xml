@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="2.5" method="upgrade">
+	<name>mod_blog_calendar</name>
+	<author>Groon solutions</author>
+	<creationDate>2014/03/01</creationDate>
+	<version>3.0.0</version>
+	<description>
+	<![CDATA[<p>This module displays a calendar and/or a list of articles by year and month. 
+	Use with the blog calendar component.<br>
+	Based on original idea from Justo Gonzales de Rivera</a>
+	</p>]]></description>
+	<files>
+		<filename module="mod_blog_calendar">mod_blog_calendar.php</filename>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>
+		<filename>calendarClass.php</filename>
+		<folder>js</folder>
+		<folder>img</folder>
+		<folder>tmpl</folder>
+		<folder>language</folder>
+	</files>
+      <config>
+       <fields name="params">
+        <fieldset name="basic">
+		 <field name="show_what" type="radio" default="0" label="MOD_BLOG_CALENDAR_SHOWWHATLBL" description="MOD_BLOG_CALENDAR_SHOWWHATDESC">
+			<option value="0">MOD_BLOG_CALENDAR_SHOWWHAT0</option>
+			<option value="1">MOD_BLOG_CALENDAR_SHOWWHAT1</option>
+		</field>
+			<field name="category_ids" multiple="true" type="category"
+				description="MOD_BLOG_CALENDAR_CHOOSE_CATEGORIES_DESC"
+				extension="com_content"
+				label="MOD_BLOG_CALENDAR_CHOOSE_CATEGORIES_LABEL"
+			/>
+	</fieldset>
+	<fieldset name="MOD_BLOG_CALENDAR_PARAMS_FOR_LIST">
+		<field name="show_list_years" type="list" default="1" label="MOD_BLOG_CALENDAR_SHOWLISTYEARSLBL" description="MOD_BLOG_CALENDAR_SHOWLISTYEARSDESC">
+			<option value="0">MOD_BLOG_CALENDAR_NO</option>
+			<option value="1">MOD_BLOG_CALENDAR_YES</option>
+		</field>	
+		<field name="show_list_months" type="list" default="1" label="MOD_BLOG_CALENDAR_SHOWLISTMONTHSLBL" description="MOD_BLOG_CALENDAR_SHOWLISTMONTHSDESC">
+			<option value="0">MOD_BLOG_CALENDAR_NO</option>
+			<option value="1">MOD_BLOG_CALENDAR_YES</option>
+		</field>				
+		<field name="show_list_articles" type="list" default="1" label="MOD_BLOG_CALENDAR_SHOWLISTARTICLESLBL" description="MOD_BLOG_CALENDAR_SHOWLISTARTICLESDESC">
+			<option value="0">MOD_BLOG_CALENDAR_NO</option>
+			<option value="1">MOD_BLOG_CALENDAR_YES</option>
+		</field>
+		<field name="show_list_sublevels" type="list" default="1" label="MOD_BLOG_CALENDAR_SHOWLISTSUBLEVELSLBL" description="MOD_BLOG_CALENDAR_SHOWLISTSUBLEVELSDESC">
+			<option value="0">MOD_BLOG_CALENDAR_NO</option>
+			<option value="1">MOD_BLOG_CALENDAR_YES</option>
+		</field>
+	</fieldset>
+	<fieldset name="MOD_BLOG_CALENDAR_PARAMS_FOR_CALENDAR">
+		<field name="cal_start_date" type="calendar" default="" label="MOD_BLOG_CALENDAR_CALSTARTDATELBL" description="MOD_BLOG_CALENDAR_CALSTARTDATEDESC">
+		</field>
+		<field name="cal_start_day" type="list" default="1" label="MOD_BLOG_CALENDAR_CALSTARTDAYLBL" description="MOD_BLOG_CALENDAR_CALSTARTDAYDESC">
+			<option value="0">MOD_BLOG_CALENDAR_SUNDAY</option>
+			<option value="1">MOD_BLOG_CALENDAR_MONDAY</option>
+			<option value="2">MOD_BLOG_CALENDAR_TUESDAY</option>
+			<option value="3">MOD_BLOG_CALENDAR_WEDNESDAY</option>
+			<option value="4">MOD_BLOG_CALENDAR_THURSDAY</option>
+			<option value="5">MOD_BLOG_CALENDAR_FRIDAY</option>
+			<option value="6">MOD_BLOG_CALENDAR_SATURDAY</option>
+		</field>
+		<field name="cal_length_days" type="list" default="2" label="MOD_BLOG_CALENDAR_LENGTHDAYSLBL" description="MOD_BLOG_CALENDAR_LENGTHDAYSDESC">
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+		</field>
+	</fieldset>
+	<fieldset name="MOD_BLOG_CALENDAR_COMMON_PARAMS">
+		<field name="dateformat_dmy" type="text" default="%A, %d %B %Y" label="Date format for day" description="Enter de date format to use for day date (full date like Monday, 02 January 2011). %A is the name of the week day, %d is the number of the month day (2 digits), %B is the month name and %Y is the year (4 digits)."></field>
+		<field name="dateformat_my" type="text" default="%B %Y" label="Date format for month" description="Enter de date format to use for month date (when day is not displayed). %B is the month name and %Y is the year (4 digits)."></field>
+		<field name="dateformat_y" type="text" default="%Y" label="Date format for year" description="Enter de date format to use for year only (when month and day is not displayed). %Y is the year (4 digits)."></field>
+	        <field type="spacer" />
+		<field name="count" type="text" default="10" label="MOD_BLOG_CALENDAR_COUNTLBL" description="" />
+		 
+	        <field type="spacer" />
+	        <field name="use_article_date" type="radio" default="yes" label="MOD_BLOG_CALENDAR_USEARTICLEDATELBL" description="MOD_BLOG_CALENDAR_USEARTICLEDATEDESC">
+			<option value="no">MOD_BLOG_CALENDAR_NO</option>
+			<option value="yes">MOD_BLOG_CALENDAR_YES</option>
+	        </field>
+	        <field name="show_create_date" type="radio" default="globals" label="MOD_BLOG_CALENDAR_SHOWDATELBL" description="MOD_BLOG_CALENDAR_SHOWDATEDESC">
+			<option value="0">MOD_BLOG_CALENDAR_HIDE</option>
+			<option value="1">MOD_BLOG_CALENDAR_SHOW</option>
+			<option value="globals">MOD_BLOG_CALENDAR_GLOBALS</option>
+	        </field>
+	        <field name="show_modify_date" type="radio" default="globals" label="MOD_BLOG_CALENDAR_SHOWMODIFYDATELBL" description="MOD_BLOG_CALENDAR_SHOWMODIFYDATEDESC">
+			<option value="0">MOD_BLOG_CALENDAR_HIDE</option>
+			<option value="1">MOD_BLOG_CALENDAR_SHOW</option>
+			<option value="globals">MOD_BLOG_CALENDAR_GLOBALS</option>
+	        </field>	  
+	        <field name="show_publish_date" type="radio" default="globals" label="MOD_BLOG_CALENDAR_SHOWPUBLISHEDDATELBL" description="MOD_BLOG_CALENDAR_SHOWPUBLISHEDDATEDESC">
+			<option value="0">MOD_BLOG_CALENDAR_HIDE</option>
+			<option value="1">MOD_BLOG_CALENDAR_SHOW</option>
+			<option value="globals">MOD_BLOG_CALENDAR_GLOBALS</option>
+	        </field>
+		<field name="show_intro" type="radio" default="globals" label="MOD_BLOG_CALENDAR_SHOWINTROLBL" description="MOD_BLOG_CALENDAR_SHOWINTRODESC">
+			<option value="0">MOD_BLOG_CALENDAR_HIDE</option>
+			<option value="1">MOD_BLOG_CALENDAR_SHOW</option>
+			<option value="globals">MOD_BLOG_CALENDAR_GLOBALS</option>
+		</field>
+		<field name="show_fulltext" type="radio" default="0" label="MOD_BLOG_CALENDAR_SHOWFULLTEXTLBL" description="MOD_BLOG_CALENDAR_SHOWFULLTEXTDESC">
+			<option value="0">MOD_BLOG_CALENDAR_HIDE</option>
+			<option value="1">MOD_BLOG_CALENDAR_SHOW</option>
+		</field>
+		<field name="clean_xhtml" type="radio" default="0" label="MOD_BLOG_CALENDAR_CLEANXHTML" description="MOD_BLOG_CALENDAR_CLEANXHTMLDESC">
+			<option value="0">MOD_BLOG_CALENDAR_NO</option>
+			<option value="1">MOD_BLOG_CALENDAR_YES</option>
+		</field>
+		<field name="show_author" type="radio" default="globals" label="MOD_BLOG_CALENDAR_SHOWAUTHORLBL" description="">
+			<option value="0">MOD_BLOG_CALENDAR_HIDE</option>
+			<option value="1">MOD_BLOG_CALENDAR_SHOW</option>
+			<option value="globals">MOD_BLOG_CALENDAR_GLOBALS</option>
+		</field>
+                <field name="show_author_username" type="radio" default="1" label="MOD_BLOG_CALENDAR_SHOWUSNAME" description="MOD_BLOG_CALENDAR_SHOWUSNAMEDESC">
+			<option value="1">Name</option>
+			<option value="2">Username</option>
+		</field>
+		<field name="show_category" type="radio" default="globals" label="MOD_BLOG_CALENDAR_SHOWCATEGORYLBL" description="MOD_BLOG_CALENDAR_SHOWCATEGORYDESC">
+			<option value="0">MOD_BLOG_CALENDAR_HIDE</option>
+			<option value="1">MOD_BLOG_CALENDAR_SHOW</option>
+			<option value="globals">MOD_BLOG_CALENDAR_GLOBALS</option>
+		</field>
+		<field name="link_category" type="radio" default="globals" label="MOD_BLOG_CALENDAR_LINKCATLBL" description="MOD_BLOG_CALENDAR_LINKCATDESC">
+			<option value="0">MOD_BLOG_CALENDAR_HIDE</option>
+			<option value="1">MOD_BLOG_CALENDAR_SHOW</option>
+			<option value="globals">MOD_BLOG_CALENDAR_GLOBALS</option>
+		</field>
+		<field name="show_hits" type="radio" default="globals" label="MOD_BLOG_CALENDAR_SHOWHITSLBL" description="MOD_BLOG_CALENDAR_SHOWHITSDESC">
+			<option value="0">MOD_BLOG_CALENDAR_HIDE</option>
+			<option value="1">MOD_BLOG_CALENDAR_SHOW</option>
+			<option value="globals">MOD_BLOG_CALENDAR_GLOBALS</option>
+		</field>
+                <field name="show_author_username" type="radio" default="1" label="MOD_BLOG_CALENDAR_SHOWUSNAME" description="MOD_BLOG_CALENDAR_SHOWUSNAMEDESC">
+			<option value="1">Name</option>
+			<option value="2">Username</option>
+		</field>
+		<field type="spacer"></field>
+		<field name="show_icons" type="radio" default="globals" label="Icons">
+			<option value="0">MOD_BLOG_CALENDAR_HIDE</option>
+			<option value="1">MOD_BLOG_CALENDAR_SHOW</option>
+			<option value="globals">MOD_BLOG_CALENDAR_GLOBALS</option>
+		</field>
+		<field name="show_print_icon" type="radio" default="globals" label="MOD_BLOG_CALENDAR_ICONPRINTLBL" description="">
+			<option value="0">MOD_BLOG_CALENDAR_HIDE</option>
+			<option value="1">MOD_BLOG_CALENDAR_SHOW</option>
+			<option value="globals">MOD_BLOG_CALENDAR_GLOBALS</option>
+		</field>
+		<field name="show_email_icon" type="radio" default="globals" label="MOD_BLOG_CALENDAR_ICONMAILLBL" description="">
+			<option value="0">MOD_BLOG_CALENDAR_HIDE</option>
+			<option value="1">MOD_BLOG_CALENDAR_SHOW</option>
+			<option value="globals">MOD_BLOG_CALENDAR_GLOBALS</option>
+		</field>
+        <field type="spacer" />
+		<field name="associatedItemid" type="text" default="" label="MOD_BLOG_CALENDAR_ASSOCIATED_ITEMID" description="MOD_BLOG_CALENDAR_ASSOCIATED_ITEMID_DESC">
+		</field>
+	</fieldset>
+	<fieldset name="advanced">
+		<field name="cache" type="list" default="1" label="MOD_BLOG_CALENDAR_CACHING_LBL" description="MOD_BLOG_CALENDAR_CACHING_DESC">
+			<option value="1">MOD_BLOG_CALENDAR_GLOBALS</option>
+			<option value="0">MOD_BLOG_CALENDAR_NOCACHING</option>
+		</field>
+		<field name="cache_time" type="text" default="900" label="MOD_BLOG_CALENDAR_CACHETIME_LBL" description="MOD_BLOG_CALENDAR_CACHETIME_DESC" />
+		<field name="moduleclass_sfx" type="text" default="" label="MOD_BLOG_CALENDAR_MODULECLASSSUFFIX_LBL" description="MOD_BLOG_CALENDAR_MODULECLASSSUFFIX_DESC" />
+        </fieldset>
+       </fields>
+      </config>
+</extension>

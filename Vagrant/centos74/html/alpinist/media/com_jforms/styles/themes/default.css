@@ -1,0 +1,108 @@
+/**
+* dark form frontend stylesheet
+*
+* @version		$Id: default.css 362 2010-02-20 06:50:23Z dr_drsh $
+* @package		Joomla
+* @subpackage	JForms
+* @copyright	Copyright (C) 2008 Mostafa Muhammad. All rights reserved.
+* @license		GNU/GPL
+*/
+
+div.jform{
+	margin-top:15px;
+	padding:10px;
+}
+
+table.jform{
+	width:100%;
+}
+
+div.jform img{
+	float:none;
+	border:0;
+}
+
+div.jform h2{
+}
+
+div.jform div.error-message
+{
+	color:red;
+	font-weight:bold;
+	float:right;
+}
+div.jform. div.label-error{
+	color:red;
+}
+iv.jform. div.input-error{
+	border:2px solid red;
+}
+
+div.jform form label{
+	margin-bottom:8px;
+	margin-right:5px;
+	float:left;
+}
+
+div.jform form fieldset{
+	margin-bottom:15px;
+	padding:5px 10px 5px 10px;
+}
+div.jform form input,
+div.jform form select,
+div.jform form textarea{
+	margin-bottom:8px;
+	float:left;
+}
+div.jform form fieldset{
+	margin-top:5px;
+	margin-bottom:10px;
+	float:left;
+}
+
+div.jform form input.radio,
+div.jform form label.radio{
+	float:none;
+}
+
+div.jform form select.day{width:80px;margin:0px 5px 0px 5px;}
+div.jform form select.month{width:80px;margin:0px 5px 0px 5px;}
+div.jform form select.year{width:80px;margin:0px 5px 0px 0px;}
+div.jform form .jfdate ul.chzn-results {width:90%;}
+div.jform form .jfdate .chzn-container {text-align:center;}
+
+div.jform form div.clear{
+	clear:left;
+}
+div.jform .jfradio,div.jform .jfcheckbox {margin-left:10px;}
+div.jform {margin-top:0px!important;}
+div.jform form {margin-top:10px;}
+div.jform label {padding-top:4px;}
+#formview label{
+	color:black;
+	clear: none;
+}
+#userblock {font-size:12px; }
+#formview legend{
+	color:black;
+	font-size:12px;
+	font-weight:normal;
+}
+#formview select,#formview textarea {
+    font-size: 12px;
+}
+.jfdtdisp { padding-top:3px;}
+#formview ul {
+    float: left;
+    list-style-position: inside;
+    list-style-type: none;
+    margin-top: 2px;
+	padding: 1px 0;
+}
+#formview li {
+    line-height: 1.2em;
+    margin-left: 0;
+}
+#formview fieldset label { 
+	display:inline;
+}

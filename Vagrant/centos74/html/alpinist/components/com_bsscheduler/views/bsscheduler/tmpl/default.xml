@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<metadata>
+	<layout title="COM_BSSCHEDULER_VIEW_ADMINTTL">
+		<message>
+			<![CDATA[COM_BSSCHEDULER_VIEW_DESC]]>
+		</message>
+	</layout>
+	<fields name="params">
+		<fieldset name="basic" label="COM_BSSCHEDULER_BASIC_FIELDSET_LABEL">
+			<field name="alldivision" type="radio" default="0" label="COM_BSSCHEDULER_SEARCCH_DIV" description="COM_BSSCHEDULER_SEARCCH_DIV_DESC">
+				<option value="0">JNo</option>
+				<option value="1">JYes</option>
+			</field>
+		</fieldset>
+	</fields>
+</metadata>
