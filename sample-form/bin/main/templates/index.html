@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8" />
+    <title>demo</title>
+</head>
+<body>
+<p>
+  <label>前回のメッセージ１：</label>
+  <label th:text="${msg1}">前回のメッセージ１</label>
+</p>
+<p>
+  <label>前回のメッセージ２：</label>
+  <label th:text="${msg2}">前回のメッセージ２</label>
+</p>
+<form action="#" th:action="@{/confirm}" method="GET">
+  <p>
+    <label for="message1">メッセージ１：</label>
+    <input id="message1" name="msg1" type="text" size="40" />
+  </p>
+  <p>
+    <label for="message2">メッセージ２：</label>
+    <input id="message2" name="msg2" type="text" size="40" />
+  </p>
+  <p>
+    <input type="submit" value="送信" />
+  </p>
+</form>
+</body>
+</html>
