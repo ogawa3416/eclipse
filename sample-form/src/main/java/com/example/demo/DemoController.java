@@ -12,9 +12,10 @@ public class DemoController {
 	}
 
 	@RequestMapping("/confirm")
-	public String confirm(@ModelAttribute("msg1") String arg1, @ModelAttribute("msg2") String arg2) {
-		System.out.println("msg1:" + arg1);
-		System.out.println("msg2:" + arg2);
+	public String confirm(@ModelAttribute("msg1") String str, @ModelAttribute("msg2") String path) {
+		System.out.println("msg1:" + str);
+		System.out.println("msg2:" + path);
+		MyUtil.saveFile(str, path);
 		return "index";
 	}
 }

@@ -10,7 +10,24 @@ import org.springframework.test.context.junit4.SpringRunner;
 public class SampleFormApplicationTests {
 
 	@Test
-	public void contextLoads() {
+	public void mytest() {
+
+		MyUtil.saveFile();
+	}
+
+	@Test
+	public void mytest2() {
+		MyUtil.saveFile("test");
+	}
+
+	@Test
+	public void mytest3() {
+		MyUtil.saveFile("ok", "testfile.txt");
+	}
+
+	@Test
+	public void mytest4() {
+		MyUtil.loadFile("test.txt");
 	}
 
 }
