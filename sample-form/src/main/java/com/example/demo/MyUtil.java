@@ -1,11 +1,14 @@
 package com.example.demo;
 
+import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.List;
 
 import org.springframework.stereotype.Controller;
 
@@ -34,30 +37,41 @@ public class MyUtil {
 		}
 	}
 
-	public static void loadFile(String path) {
+	// public static String loadFile1(String path) {
+	// System.out.println("ファイルをロードします");
+
+	// String path1 = "C:/Users/Kohei Ogawa/Documents/" + path;
+
+	// return path1;
+	// }
+
+	public static List<String> loadFile(String path) {
 		System.out.println("ファイルをロードします");
-		System.out.println("------------------------------");
+
+		List<String> list = new ArrayList<>();
 
 		String path1 = "C:/Users/Kohei Ogawa/Documents/" + path;
-
 		try {
 			File file = new File(path1);
 
-			if (file.exists()) {
-				FileReader filereader = new FileReader(file);
-
-				int data;
-				while ((data = filereader.read()) != -1) {
-					System.out.print((char) data);
-				}
-				filereader.close();
-			} else {
-				System.out.println("ファイルは存在しません");
+			if (!file.exists()) {
+				System.out.print("ファイルが存在しません");
 			}
+
+			FileReader fileReader = new FileReader(file);
+			BufferedReader bufferedReader = new BufferedReader(fileReader);
+			String data;
+			while ((data = bufferedReader.readLine()) != null) {
+				list.add(data);
+			}
+
+			fileReader.close();
+
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
 
-		System.out.println("------------------------------");
+		return list;
 	}
+
 }
