@@ -43,7 +43,12 @@ public class SampleFormApplicationTests {
 		String[] nameList = { "田中", "鈴木", "木村" };
 		String[] mailList = { "tanaka@gmail.com", "suzuki@gmail.com", "kimura@gmail.com" };
 		int[] ageList = { 21, 35, 28 };
-		User.SaveCsv(nameList, mailList, ageList);
+		User.SaveCSV(nameList, mailList, ageList);
+	}
+
+	@Test
+	public void mytest7() {
+		User.ReadCSV();
 	}
 
 }
