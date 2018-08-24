@@ -2,7 +2,7 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="utf-8" />
-    <title>demo</title>
+    <title>form-test</title>
 </head>
 <body>
 <p>
@@ -15,12 +15,16 @@
 </p>
 <form action="#" th:action="@{/confirm}" method="GET">
   <p>
-    <label for="message1">テキスト：</label>
+    <label for="message1">名前：</label>
     <input id="message1" name="msg1" type="text" size="40" />
   </p>
   <p>
-    <label for="message2">ファイル名：</label>
+    <label for="message2">メールアドレス：</label>
     <input id="message2" name="msg2" type="text" size="40" />
+  </p>
+  <p>
+    <label for="message3">年齢：</label>
+    <input id="message3" name="msg3" type="text" size="40" />
   </p>
   <p>
     <input type="submit" value="送信" />
