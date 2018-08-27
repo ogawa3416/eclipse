@@ -6,12 +6,16 @@
 </head>
 <body>
 <p>
-  <label>前回のテキスト：</label>
-  <label th:text="${msg1}">前回のテキスト</label>
+  <label>前回の名前：</label>
+  <label th:text="${msg1}">前回の名前</label>
 </p>
 <p>
-  <label>前回のファイル名：</label>
-  <label th:text="${msg2}">前回のファイル名</label>
+  <label>前回のメールアドレス：</label>
+  <label th:text="${msg2}">前回のメールアドレス</label>
+</p>
+<p>
+  <label>前回の年齢：</label>
+  <label th:text="${msg3}">前回の年齢</label>
 </p>
 <form action="#" th:action="@{/confirm}" method="GET">
   <p>

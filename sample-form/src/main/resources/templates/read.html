@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8" />
+    <title>form-test</title>
+</head>
+<body>
+<p>
+  <label>前回の読み込みファイル：</label>
+  <label th:text="${msg1}">前回の読み込みファイル</label>
+</p>
+
+<form action="#" th:action="@{/confirm1}" method="GET">
+  <p>
+    <label for="message1">読み込みファイル名：</label>
+    <input id="message1" name="msg1" type="text" size="40" />
+  </p>
+    <input type="submit" value="送信" />
+  </p>
+</form>
+</body>
+</html>
