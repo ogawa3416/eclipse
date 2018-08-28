@@ -71,8 +71,6 @@ xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
 		</head>
 	<body>
 
-  	<th:block th:replace="${links}" />
-
   	<header th:fragment="header">
 			<div class="gtco-loader"></div>
 			<div id="page">
@@ -91,6 +89,7 @@ xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
 										<li><a th:href="@{/index}">ホーム</a></li>
 										<li><a th:href="@{/about}">牡蠣の世界？</a></li>
 										<li><a th:href="@{/services}">サービス</a></li>
+										<li><a th:href="@{/company}">会社概要</a></li>
 										<!-- <li><a href="contact.html">お問い合わせ</a></li> -->
 									</ul>
 								</div>
@@ -143,8 +142,8 @@ xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
 								<div class="col-xs-12 col-sm-4 col-md-3 item">
 									<div class="gtco-staff copyright">
 										<p><img src="images\004.png" alt="" class="img-responsive" width="30％" height="30%"></p>
-										<p>Copyright (C) 2018
-											<br>Oyster World&nbsp;Co.,Ltd
+										<p>Copyright (C)
+											<br>OYSTER WORLD&nbsp;INC.
 											<br>All Rights Reserved.
 										</p>
 									</div>

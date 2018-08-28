@@ -7,7 +7,7 @@
 }
 /* =======================================================
 *
-* 	Template Style 
+* 	Template Style
 *
 * ======================================================= */
 body {
@@ -1696,7 +1696,7 @@ a {
   background-color:#000;
   height:22px;
   width: 200%;
-  margin: 0 -500%; 
+  margin: 0 -500%;
   padding: 0 500%;
 }
 
@@ -1849,6 +1849,32 @@ a {
   border:3px solid #fff;
   padding:0px 0px 0px 0px;
   margin-bottom:30px;
+}
+
+.kaisha {
+width: 100%;
+margin-bottom:50px;
+}
+
+.kaisha th,
+.kaisha td {
+border: 1px solid #ccc;
+padding: 20px;
+}
+
+.kaisha th {
+font-weight: bold;
+background-color: #edf0f3;
+}
+
+.kaisha tr {
+background-color: #fff;
+}
+
+h2 {
+display: block;
+border-bottom: solid 6px #aad0ea;
+width: 90%;
 }
 
 /* ここまでmain */

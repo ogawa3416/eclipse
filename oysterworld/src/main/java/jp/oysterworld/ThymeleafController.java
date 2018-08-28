@@ -26,4 +26,9 @@ public class ThymeleafController {
 		return "contact";
 	}
 
+	@RequestMapping("/company")
+	public String company() {
+		return "company";
+	}
+
 }
