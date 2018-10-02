@@ -31,4 +31,9 @@ public class ThymeleafController {
 		return "company";
 	}
 
+	@RequestMapping("/member")
+	public String member() {
+		return "member";
+	}
+
 }

@@ -10,6 +10,7 @@ buildscript {
 	}
 }
 
+apply plugin: 'war'
 apply plugin: 'java'
 apply plugin: 'eclipse'
 apply plugin: 'org.springframework.boot'
@@ -28,4 +29,9 @@ dependencies {
 	compile('org.springframework.boot:spring-boot-starter-thymeleaf')
 	compile('org.springframework.boot:spring-boot-starter-web')
 	testCompile('org.springframework.boot:spring-boot-starter-test')
+	providedCompile ('org.springframework.boot:spring-boot-starter-tomcat')
+}
+
+war {
+    baseName = 'spring-boot-war'
 }
