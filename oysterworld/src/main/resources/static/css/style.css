@@ -1887,6 +1887,18 @@ width: 90%;
   box-shadow: 2px 2px 4px gray;
 }
 
+.position{
+  padding:0px 5px;
+  display: block;
+  text-align: center;
+  border:3px solid #DF0101;
+  color: #DF0101;
+  border-radius:25px;
+  position:relative;
+  top:10px;
+}
+
+
 /* ここまでmain */
 
 

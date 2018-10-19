@@ -10,7 +10,6 @@ buildscript {
 	}
 }
 
-apply plugin: 'war'
 apply plugin: 'java'
 apply plugin: 'eclipse'
 apply plugin: 'org.springframework.boot'
@@ -31,9 +30,10 @@ dependencies {
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 	compile('nz.net.ultraq.thymeleaf:thymeleaf-layout-dialect')
 	compile('org.springframework.boot:spring-boot-devtools')
-	providedCompile ('org.springframework.boot:spring-boot-starter-tomcat')
+	//providedCompile ('org.springframework.boot:spring-boot-starter-tomcat')
 }
 
-war {
-    baseName = 'spring-boot-war'
+jar {
+    baseName = 'demo'
+    version = '0.0.1-SNAPSHOT'
 }
