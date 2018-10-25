@@ -11,6 +11,7 @@ public class OysterworldApplicationTests {
 
 	@Test
 	public void contextLoads() {
+		int a = 1;
 	}
 
 }

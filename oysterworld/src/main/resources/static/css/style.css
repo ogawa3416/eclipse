@@ -1833,6 +1833,11 @@ a {
 .feature-left h6 {
   font-size:19px;
   margin-top:25px;
+  font-weight: bold;
+  padding: 0.25em 0.5em;
+  color: #494949;
+  background: transparent;
+  border-left: solid 5px #7db4e6;
 }
 
 .staff1 img{
@@ -1871,10 +1876,31 @@ background-color: #edf0f3;
 background-color: #fff;
 }
 
+@media screen and (max-width: 640px) {
+  .last td:last-child {
+    border-bottom: solid 1px #ccc;
+    width: 100%;
+  }
+  .kaisha th,
+  .kaisha td {
+　　border-bottom: none;
+    display: block;
+    width: 100%;
+  }
+}
+
 h2 {
+margin-top: 10px;
+position: relative;
+padding: 0.25em 0;
+}
+h2:after {
+content: "";
 display: block;
-border-bottom: solid 6px #aad0ea;
-width: 90%;
+height: 4px;
+background: -moz-linear-gradient(to right, rgb(90, 172, 230), transparent);
+background: -webkit-linear-gradient(to right, rgb(90, 172, 230), transparent);
+background: linear-gradient(to right, rgb(90, 172, 230), transparent);
 }
 
 .member{
@@ -1886,18 +1912,22 @@ width: 90%;
   border:3px solid #fff;
   box-shadow: 2px 2px 4px gray;
 }
-
-.position{
-  padding:0px 5px;
-  display: block;
+.member p{
+  font-size: 14px;
+}
+.member h6{
+  padding:3px 5px;
   text-align: center;
-  border:3px solid #DF0101;
+  border:1px solid #DF0101;
   color: #DF0101;
   border-radius:25px;
-  position:relative;
-  top:10px;
+  font-family:verdana,sans-serif;
+  font-size: 14px;
 }
-
+.member h4{
+  font-weight:bold;
+  font-size: 22px;
+}
 
 /* ここまでmain */
 
